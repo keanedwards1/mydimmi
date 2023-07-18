@@ -1,0 +1,1262 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(106, 179, 167);
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+body.dark-theme {
+  background-color: #0b0e13;
+  color: #fff;
+}
+body.light-theme {
+  background-color: #eae9e9;
+  color: #0f0f0f;
+}
+
+body.light-theme #poem-prompt {
+  color: #6c7a91;
+}
+body.dark-theme #poem-prompt {
+  color: #838b98;
+}
+
+body.light-theme #poem-input {
+  color: #293345;
+}
+body.dark-theme #poem-input {
+  color: #bec7d8;
+}
+
+/* beginning of header css */
+#title-logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header.light-theme {
+  background-color: #0b0e13;
+  color: #fff;
+  height: 100%;
+}
+
+header.dark-theme {
+  background-color: #d5dbe5;
+  color: rgb(15, 15, 15);
+  height: 113px;
+}
+
+#home {
+  width: 100%;
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+.shrink {
+  transform: scale(0.5);
+} */
+
+/* #60759f and #394760 compliment each other with
+this background as text colors */
+
+#title {
+  color: #9fadc6;
+  margin-left: -11px;
+  margin-top: 74px;
+  margin-right: 43px;
+  width: 120px;
+  text-align: center;
+  flex-shrink: 1;
+}
+
+#logo {
+  margin-left: 40px;
+  margin-top: 35px;
+  flex-shrink: 0;
+}
+.logo-click {
+  cursor: pointer;
+}
+
+.title {
+  overflow-wrap: break-word;
+}
+
+#menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-bar-buttons {
+  margin: 0 20px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+/* took this out because I ran into error when
+trying to query the divs to animate the tooltips */
+/* .menu-tooltips {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color:#000;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: -30px;
+} */
+
+/* begin heading tooltip styling section */
+
+#settings {
+  margin: auto;
+  width: 30px;
+}
+
+#settings-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  border: 1px solid #ccc;
+}
+
+#settings:hover + #settings-tooltip {
+  display: flex;
+}
+
+#learn {
+  width: 40px;
+}
+
+#learn-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  border: 1px solid #ccc;
+}
+
+#learn:hover + #learn-tooltip {
+  display: flex;
+}
+
+#journal {
+  width: 35px;
+}
+
+#journal-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  border: 1px solid #ccc;
+}
+
+#journal:hover + #journal-tooltip {
+  display: flex;
+}
+
+#upvote {
+  width: 30px;
+}
+
+#upvote-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  border: 1px solid #ccc;
+}
+
+#upvote:hover + #upvote-tooltip {
+  display: flex;
+}
+
+#comp {
+  width: 30px;
+}
+
+#comp-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  border: 1px solid #ccc;
+}
+
+#comp:hover + #comp-tooltip {
+  display: flex;
+}
+
+/* end header tooltip styling section */
+
+#pref {
+  width: 230px;
+  height: 50px;
+  display: flex;
+  justify-content: center; /* Horizontally center the images */
+  align-items: center; /* Vertically center the images */
+}
+
+#theme-toggle-div, #profile-div {
+  padding: 0 15px;
+  box-sizing: border-box;
+  justify-content: center; /* Horizontally center the images within their respective divs */
+  align-items: center; /* Vertically center the images within their respective divs */
+}
+
+#theme-toggle-div {
+  height: 50px;
+  margin-top: 0px;
+}
+
+#theme-image {
+  width: 35px;
+  margin-top: 7px;
+  height: auto;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#profile-div {
+  position: relative;
+  /* display: inline-block; */
+  width: 70px;
+  height: 50px;
+  z-index: 999;
+}
+
+#profile-photo {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.dropdown-content {
+  position: absolute;
+}
+
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.03);
+  }
+  90% {
+    transform: translate(-50%, -50%) scale(1.001);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#dropdown-items.dark-theme {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dee0ee;
+  max-width: 95px;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color:#0f0f0f;
+  animation: grow 1.5s infinite;
+  position: relative;
+  top: 35px;
+  margin-left: -2px;
+}
+
+#dropdown-items.light-theme {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #161618;
+  max-width: 95px;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 5px;
+  color:#e7dede;
+  animation: grow 1.5s infinite;
+  position: relative;
+  top: 35px;
+  margin-left: -2px;
+}
+
+.dropdown-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* end of header css */
+
+/* beginning of poem div */
+#poem-wrapper {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#poem-container {
+    margin: 150px 50px 0 50px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+#poem-prompt {
+    width: 100%;
+    height: 100px;
+    margin-top: -80px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+#tooltip-container {
+  position: relative;
+}
+.tooltip5 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  color:#000;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: -30px;
+}
+
+#poem-prompt:hover + #tooltip5 {
+  display: block;
+}
+#poem-div {
+  height: auto;
+  margin-top: -25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  /*display: inline-block;
+  overflow: auto; */
+}
+/* free poem textarea */
+#poem-form {
+  width: 90%;
+}
+
+#poem-input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 400px;
+    margin-top: 50px;
+    white-space: pre-wrap;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    color: #9fadc6;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* changes the font of the placeholder */
+#poem-input::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: #444d5b;
+}
+#poem-input::-webkit-input-placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: #444d5b;
+  }
+  #poem-input::-moz-placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: #444d5b;
+  }
+  #poem-input:-ms-input-placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: #444d5b;
+  }
+
+  #poem-input::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /*----------------------------------------------------------------
+
+  code in case you want the scrollbar to show up
+
+  /* #poem-input::-webkit-scrollbar.dark-theme {
+    width: 5px;
+    /* background-color: #0b0e13;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  /* fallbacks for other browser types
+
+  #poem-input::-webkit-scrollbar-thumb.dark-theme {
+    /* background-color: #000000;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  #poem-input::-webkit-scrollbar.light-theme {
+    width: 5px;
+    /* background-color: #eceae1;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  /* fallbacks for other browser types 
+  
+  #poem-input::-webkit-scrollbar-thumb.light-theme {
+    /* background-color: #eceae1; 
+    background-color: transparent;
+    border-radius: 10px;
+  } 
+
+   ---------------------------------------------------------------- */
+
+  
+  #submit-container {
+    width: 40px;
+    height: 40px;
+    /* margin-bottom: -20px; */
+    /* display: inline-block; */
+    vertical-align: bottom;
+    align-content: right;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  #submit-button {
+    width: 40px;
+    height: 40px;
+  }
+  #submit-img {
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+  }
+
+  .tooltip {
+    position: fixed;
+    display: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  #submit-container, #submit-button, #new-prompt-container, #new-prompt-butt {
+    position: relative;
+  }
+
+  #submit-container:hover .tooltip, #new-prompt-container:hover .tooltip {
+    display: block;
+  }
+  #new-prompt-container {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 15px;
+    margin-right: 5px;
+  }
+
+  #new-prompt-butt {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+  }
+  #new-prompt-button {
+    width: 30px;
+    height: 30px;
+    max-width: 100%;
+  }
+  #submit-container, #submit-button, #new-poem-container, #new-poem-butt {
+    position: relative;
+  }
+
+  #submit-container:hover .tooltip, #new-poem-container:hover .tooltip {
+    display: block;
+  }
+  #new-poem-container {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 11px;
+    margin-left: -10px;
+  }
+  #new-poem-butt {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+  }
+  #new-poem-button {
+    width: 30px;
+    height: 30px;
+    max-width: 100%;
+  }
+
+  .tooltip4 {
+    position: fixed;
+    display: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 999;
+  }
+
+  #new-poem-button:hover + .tooltip4 {
+    display: flex;
+  }
+  #new-poem-button {
+    position: relative;
+  }
+
+  .tooltip2 {
+    position: fixed;
+    display: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 999;
+    /*width: 90px;*/
+  }
+
+  #new-prompt-button:hover + .tooltip2 {
+    display: flex;
+  }
+
+  #new-prompt-button {
+    position: relative;
+  }
+  #poem-of-the-day-container {
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    margin-top: 6px;
+    margin-left: -6px;
+    color:#fff;
+    text-align: center;
+  }
+  #poem-of-the-day-button {
+    width: 30px;
+    height: 30px;
+    max-width: 100%;
+  }
+  .tooltip3 {
+    position: fixed;
+    display: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 999;
+  }
+
+  #poem-of-the-day-button:hover + .tooltip3 {
+    display: flex;
+  }
+  #poem-of-the-day-button:hover {
+    cursor: pointer;
+  }
+  #poem-of-the-day-button, #poem-of-the-day {
+    position: relative;
+  }
+
+  #refresh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+  height: auto;
+}
+#refresh-button-container {
+  display: flex;
+}
+/* for new prompt button */
+#new-prompt-button {
+    font-size: 16px;
+    padding: 10px;
+    flex-direction: row;
+}
+#new-prompt-button:hover {
+    cursor: pointer;
+}
+#new-poem-button:hover {
+    cursor: pointer;
+}
+body.dark-theme #title {
+  color: #566b8e;
+}
+body.dark-theme #poem-input::placeholder {
+  color: #566b8e;
+}
+body.dark-theme #poem-input::-webkit-input-placeholder {
+  color: #566b8e;
+}
+body.dark-theme #poem-input::-moz-placeholder {
+  color: #566b8e;
+}
+body.dark-theme #poem-input:-ms-input-placeholder {
+  color: #566b8e;
+}
+
+#bottom-bar {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+#bottom-bar div{
+  flex: 1;
+}
+
+#live {
+  width: 80px;
+  margin-left: 30px;
+}
+
+#infoButton {
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  margin-right: 40px;
+}
+#info-image {
+  width: 35px;
+  opacity: 85%;
+}
+#info-image:hover {
+  opacity: 70%;
+}
+.tooltip5 {
+  position: fixed;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 999;
+  margin-top: -30px;
+}
+
+#infoButton:hover .tooltip5 {
+  display: flex;
+}
+
+#infoButton, #info-image {
+  position: relative;
+}
+
+/*----------------------------------------------------------------
+------------------------------- Submit Popup -----------------------
+----------------------------------------------------------------*/
+
+@keyframes pulsate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  90% {
+    transform: translate(-50%, -50%) scale(1.002);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#result-rectangle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 400px;
+  background: linear-gradient(to bottom, #eae9e9, #293345); /* Gradient colors */
+  display: none;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  z-index: 999;
+/* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3); */
+  animation: pulsate 4s infinite;
+  text-align: center;
+  font-size: 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.result-rectangle-poem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -15px;
+  width: inherit;
+  height: 68%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 15px 35px 0px 35px;
+  overflow-wrap: break-word;
+}
+
+#result-rectangle-grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  height: 25%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: px;
+  border-radius: 10px;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.result-rectangle-button {
+  width: 200px;
+  height: 100px;
+  background-color: #ccc;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background: linear-gradient(to bottom, #eae9e9, #293345); /* Gradient colors */
+
+}
+
+/*----------------------------------------------------------------
+------------------------------- Info Popup -----------------------
+----------------------------------------------------------------*/
+#rectangleContainer {
+  position: fixed;
+  top: 0;
+  right: -420px; /* Start off-screen */
+  width: 275px;
+  height: 540px;
+  margin-top: 150px;
+  margin-right: 20px;
+  transition: right 0.3s ease-out;
+}
+
+#rectangle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #eae9e9, #0b0e13); /* Gradient colors */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: monospace;
+  margin-right: 4px;
+  margin-top: -2px;
+  color:rgb(57, 71, 96);
+}
+
+.custom-button {
+  background-color: #d8d8d8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-button:hover {
+  background-color: #494949;
+}
+
+.custom-button:active {
+  background-color: #494949;
+}
+
+#popup-writing {
+  color:rgb(57, 71, 96);
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  grid-gap: 10px; /* Gap between grid items */
+}
+
+.item {
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+/* -------------------------------- */
+
+/* upvote.html */
+
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.upvote-section {
+  width: 100px;
+  padding: 0 40px;
+}
+
+.vote-button {
+  width: 20px;
+  height: 20px;
+  /* Add any additional styles for the vote buttons */
+}
+
+.content-section {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.name {
+  margin-top: 10px;
+  /* Add any additional styles for the author name */
+}
+
+.comment-section {
+  margin-top: 20px;
+  /* Add any additional styles for the comment section */
+}
+
+/* -------------------------------- */
+
+@media (max-width: 930px) {
+  #refresh {
+    position: relative;
+    top: 30px;
+  }
+
+  #menu-bar {
+    gap: 0px;
+  }
+  .menu-bar-buttons {
+    margin: 0 12px;
+  }
+
+  #logo {
+    transform: scale(0.8);
+    margin-left: 25px;
+  }
+  #logo:hover {
+    transform: scale(0.9);
+  }
+
+  #title {
+    transform: scale(0.8);
+    margin-left: -20px;
+    margin-right: 15px;
+    transition: margin-left 1s ease;
+  }
+  #title:hover {
+    transform: scale(0.9);
+  }
+
+  #upvote {
+    transform: scale(0.8);
+  }
+  #upvote:hover {
+    transform: scale(0.9);
+  }
+
+  #comp {
+    transform: scale(0.8);
+  }
+  #comp:hover {
+    transform: scale(0.9);
+  }
+
+  #learn {
+    transform: scale(0.8);
+  }
+  #learn:hover {
+    transform: scale(0.9);
+  }
+
+  #live {
+    transform: scale(0.8);
+  }
+  #live:hover {
+    transform: scale(0.9);
+  }
+
+  #settings {
+    transform: scale(0.8);
+  }
+  #settings:hover {
+    transform: scale(0.9);
+  }
+
+  #journal {
+    transform: scale(0.8);
+  }
+  #journal:hover {
+    transform: scale(0.9);
+  }
+
+  #pref {
+    width: 170px;
+  }
+
+  #theme-toggle-div {
+    padding: 0 6px;
+  }
+
+  #theme-image {
+    transform: scale(0.8);
+  }
+  #theme-image:hover {
+    transform: scale(0.9);
+  }
+
+  #profile-photo {
+    transform: scale(0.8);
+  }
+  #profile-photo {
+    transform: scale(0.9);
+  }
+
+}
+
+@media (max-width: 682px) {
+  #refresh {
+    position: relative;
+    top: 60px;
+  }
+  .menu-bar-buttons {
+    margin: -4px;
+  }
+
+  #logo {
+    margin-left: 10px;
+  }
+  #title {
+    margin-left: -20px;
+    margin-right: 1px;
+  }
+
+  #menu-bar {
+    margin-left: 10px;
+  }
+
+  #pref {
+    width: 140px;
+  }
+  #theme-toggle-div {
+    padding: 0;
+  }
+  #profile-div {
+    margin-left: -10px;
+  }
+
+  #upvote {
+    transform: scale(0.8);
+  }
+  #upvote:hover {
+    transform: scale(0.9);
+  }
+
+  #comp {
+    transform: scale(0.5);
+  }
+  #comp:hover {
+    transform: scale(0.8);
+  }
+
+  #learn {
+    transform: scale(0.5);
+  }
+  #learn:hover {
+    transform: scale(0.8);
+  }
+
+  #live {
+    transform: scale(0.5);
+  }
+  #live:hover {
+    transform: scale(0.8);
+  }
+
+  #settings {
+    transform: scale(0.5);
+  }
+  #settings:hover {
+    transform: scale(0.8);
+  }
+
+  #journal {
+    transform: scale(0.5);
+  }
+  #journal:hover {
+    transform: scale(0.8);
+  }
+}
+
+
+
+
+/* just bothering me, mess with this later
+@media only screen and (max-width: 768px) {
+  #poem-wrapper {
+    width: 100%;
+  }
+  #poem-container {
+    margin: 0;
+    display: block;
+  }
+  #poem-prompt {
+    width: 100%;
+  }
+  #enter-poem {
+    width: 100%;
+  }
+  #poem-div {
+    width: 100%;
+  }
+  #poem-input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  /*
+  #logo {
+    float: none;
+    display: block;
+    margin: auto;
+  }
+  .menu-bar-buttons {
+    float: none;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #pref {
+    float: none;
+    display: block;
+    margin: auto;
+  }
+}
+*/
+
+
+/* styles for screens smaller than 1200px */
+/* @media only screen and (max-width: 1250px) {
+  #home {
+    width: 100%;
+  }
+  #title-logo {
+    margin-left: -20px;
+  }
+  #pref {
+    margin-right: 0;
+  }
+  #theme-toggle-div {
+    margin-left: 20px;
+  }
+  #poem-wrapper {
+    width: 833px;
+    margin-left: -20px;
+  }
+  #poem-container {
+    width: 833px;
+  }
+  #peom-div {
+    height: auto;
+    width: 833px;
+    display: inline-block;
+    overflow: auto;
+  }
+}
+
+/* styles for screens smaller than 768px */
+/*@media only screen and (max-width: 890px) {
+  header {
+    width: 100%;
+  }
+  #home {
+    width: 100%;
+  }
+  #title-logo {
+    margin-left: -40px;
+  }
+  #pref {
+    margin-right: 250px;
+  }
+  #theme-toggle-div {
+    margin-left: 20px;
+  }
+  #peom-div {
+    width: 890px;
+  }
+  #poem-prompt {
+    width: 90%;
+  }
+  #enter-poem {
+    width: 90%;
+  }
+  #poem-input {
+    width: 90%;
+  }
+  #refresh {
+    margin-left: 10%;
+  }
+} */
+
+/* icon hover */
+
+#logo, #title,
+.menu-bar-buttons img,
+#theme-image,
+#profile-photo,
+#new-prompt-button,
+#poem-of-the-day-button,
+#new-poem-button,
+#submit-img,
+#info-image {
+  transition: transform 0.2s ease;
+}
+
+#new-prompt-button:hover,
+#poem-of-the-day-button:hover,
+#new-poem-button:hover,
+#submit-img:hover,
+#info-image:hover {
+  transform: scale(1.2);
+}
+
+#logo:hover, #title:hover,
+#theme-image:hover,
+#profile-photo:hover,
+.menu-bar-buttons img:hover {
+  transform: scale(1.1);
+}
+
+/* */
+
+/* 3d effect */
+.vector-art {
+  border: 5px solid;
+  border-image: linear-gradient(to right, #000, #fff) 1;
+  border-image-slice: 1;
+  margin: 5px;
+  border-radius: 5px;
+
+}
+
+/* .vector-art {
+  outline: 2px solid #000;
+} */
+
+.vector-art {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* */ 
+
+
+
+
+
+
+
+
+
+  

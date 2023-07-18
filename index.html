@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
+  <title>Dimmi Handmade</title>
+  <script defer src="js/toggleTheme.js"></script>
+  <script defer src="js/profileDropdown.js"></script>
+  <script defer src="js/tooltip.js"></script>
+  <script defer src="js/popup.js"></script>
+</head>
+<body>
+
+  <header>
+
+    <!-- home is the div with all the header elements in it (kinda obv) -->
+    <div id="home">
+
+      <!-- logo -->
+      <div id="title-logo">
+        <div id="logo" style="display: inline-block; vertical-align: middle;">
+          <a id="logo-click" href="index.html">
+            <img id="logo-img" src="images/dimmi.png" width="60">
+          </a>
+        </div>
+        <!-- home button -->
+        <h2 id="title" class="title" style="display: inline-block;
+        vertical-align: middle;">
+        <span style="cursor: pointer;" onclick="window.location.href=
+        'index.html'">Dimmi Handmade</span>
+        </h2>
+      </div>
+
+      <!-- page selection -->
+      <div id="menu-bar">
+        <a id="logo-click" class="menu-bar-buttons" href="settings.html">
+          <img src="images/gear-inverted.png" alt="settings" id="settings">
+          <span class="menu-tooltips" id="settings-tooltip">settings</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="learn.html">
+          <img src="images/learn-day.png" alt="learn" id="learn">
+          <span class="menu-tooltips" id="learn-tooltip">learn</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="journal.html">
+          <img src="images/journal.png" alt="journal" id="journal">
+          <span class="menu-tooltips" id="journal-tooltip">journal</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="upvote.html">
+          <img src="images/upvote-day.svg" alt="upvote" id="upvote">
+          <span class="menu-tooltips" id="upvote-tooltip">upvote</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="comp.html">
+          <img src="images/comp-day.png" alt="comp" id="comp">
+          <span class="menu-tooltips" id="comp-tooltip">comp</span>
+        </a>
+      </div>
+
+      <!-- profile / toggle theme -->
+      <div id="pref">
+        <div id="theme-toggle-div">
+          <img id="theme-image" src="images/sun.png" alt="sun">
+        </div>
+        <div id="profile-div">
+          <div id="dropdown" class="dropdown-content">
+            <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
+            <div id="dropdown-items">
+              <a href="profile.html" class="dropdown-item">Profile</a>
+              <a href="rank.html" class="dropdown-item">Rank</a>
+              <!-- <a href="settings.html" class="dropdown-item">Settings</a> --> <!-- might put this here,
+              didn't want to remove it from the header for now -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- this is the poem box -->
+    <div id="poem-wrapper">
+      <div id="poem-container">
+        <div id="tooltip-container">
+          <div id="poem-prompt">
+            <span id="prompt-text" class="tooltip6"><!-- text fetched from an array --></span>
+          </div>
+        </div>
+        <!-- div for all the commands for the poem prompts and the poem textarea -->
+        <div id="refresh">
+          <!-- refresh-button-container is probably a redundant div (can test but it doesn't seem like it matters much) -->
+          <div id="refresh-button-container">
+
+            <!-- gives a new poem-prompt when clicked -->
+            <div id="new-prompt-container">
+              <a id="new-prompt-butt">
+                <img id="new-prompt-button" src="images/newPrompt-day.png">
+                <span class="tooltip2">new prompt</span>
+              </a>
+            </div>
+
+            <!-- makes the poem go to the poem of the day when clicked -->
+            <div id="poem-of-the-day-container">
+              <a id="poem-of-day">
+                <img id="poem-of-the-day-button" src="images/poemOfTheDay-day.png">
+                <span class="tooltip3">prompt of the day</span>
+              </a>
+            </div>
+
+            <!-- gives a new inspirational text as a placeholder in the textarea -->
+            <div id="new-poem-container">
+              <a id="new-poem-butt">
+                <img id="new-poem-button" src="images/newPrompt-day.png">
+                <span class="tooltip4">new poem</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- div for the textarea where the users will type their poems -->
+          <div id="poem-div">
+            <form id="poem-form" method="post">
+                <textarea id="poem-input"></textarea>
+                <input type="hidden" name="page" value="upvote.html">
+                <div id="submit-container">
+                  <a href="upvote.html" id="submit-button">
+                    <img src="images/submit-day.png" alt="submit" id="submit-img">
+                    <span class="tooltip">submitchur pome</span>
+                  </a>
+                </div>
+            </form>
+          </div>
+
+      </div>
+    </div>
+
+    <!-- for the popup -->
+    <div id="bottom-bar">
+      <a id="logo-click" class="menu-bar-buttons" href="live.html">
+        <img src="images/live-day.png" alt="live" id="live">
+      </a>
+      <a id="infoButton">
+        <img src="images/info.png" alt="info" id="info-image">
+        <span class="tooltip5">cmnd + i</span>
+        <!-- <button id="showRectButton" class="popup-button">info</button> -->
+      </a>
+
+      <!-- <div id="submit-container">
+        <a href="#" id="submit-button">
+          <img src="images/submit-day.png" alt="Submit" id="submit-img">
+          <span class="tooltip">submitchur pome</span>
+        </a>
+      </div> -->
+    </div>
+
+    <!-- this is the popup that pops up when the user presses cmd + i -->
+    <div id="rectangleContainer">
+      <div id="rectangle">
+        <button id="closeButton">x</button>
+        <div id="popup-writing">
+          <h3>
+            <div class="vector-art">cmd + i toggles the info page</div>
+          </h3>
+          <h3>
+            <div class="vector-art">cmd + k toggles light/dark theme</div>
+          </h3>
+        </div>
+
+            <!-- TODO: add this -->
+        <div id="toggle-tooltip">gets rid of the hover boxes →</div>
+
+        <div class="grid-container">
+          <div class="item">Item 1</div>
+          <div class="item">Item 2</div>
+          <div class="item">Item 3</div>
+          <div class="item">Item 4</div>
+          <div class="item">Item 5</div>
+          <div class="item">Item 6</div>
+        </div>
+
+
+        <button class="custom-button" onclick="window.open('https://screamintothevoid.com/', '_blank')">Click me</button>
+      </div>
+
+    </div>
+
+    <!-- this is the popup that pops up when the user presses the submit button -->
+    <div id="result-rectangle">
+      <div id="result-rectangle-poem" class="result-rectangle-poem"></div>
+      <div id="result-rectangle-grid">
+        <div id="saveToJournal" class="result-rectangle-button">Save To Journal</div>
+        <div id="submitToFreeChallenge" class="result-rectangle-button">Submit to Free Challenge</div>
+        <div id="submitToPaidChallenge" class="result-rectangle-button">Submit to Paid Challenge</div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
