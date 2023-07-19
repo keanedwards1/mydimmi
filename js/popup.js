@@ -52,8 +52,8 @@ document.addEventListener("click", (event) => {
 // JavaScript code to show and hide the result rectangle
 if (currentPage === 'index.html') {
     const resultRectangle = document.getElementById("result-rectangle");
-    const submitButton = document.getElementById("submit-img");
-    const poemInputy = document.getElementById("poem-input"); // weird variable name cause poemInput was already declared
+/*     const submitButton = document.getElementById("submit-img");
+ */    const poemInputy = document.getElementById("poem-input"); // weird variable name cause poemInput was already declared
     const resultRectanglePoem = document.getElementById("result-rectangle-poem");
     let isPoemRectangleVisible = false;
 
@@ -70,14 +70,14 @@ if (currentPage === 'index.html') {
       isPoemRectangleVisible = false;
     }
 
-    submitButton.addEventListener("click", (event) => {
+/*     submitButton.addEventListener("click", (event) => {
       event.preventDefault();
       if (isPoemRectangleVisible) {
         hideResultRectangle();
       } else {
         showResultRectangle();
       }
-    });
+    }); */
 
     document.addEventListener("click", (event) => {
       const target = event.target;

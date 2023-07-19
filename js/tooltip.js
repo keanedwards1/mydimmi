@@ -1,13 +1,13 @@
 /* menu-bar tooltips */
-const settings = document.getElementById('settings');
-const settingsTooltip = document.querySelector('#settings-tooltip');
+/* const settings = document.getElementById('settings');
+const settingsTooltip = document.querySelector('#settings-tooltip'); */
 
-settings.addEventListener("mousemove", function(event) {
+/* settings.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
   settingsTooltip.style.top = y + 34 + "px";
   settingsTooltip.style.left = x - 23 + "px";
-});
+}); */
 
 
 const learn = document.getElementById('learn');
@@ -69,7 +69,7 @@ toggleInfoButton.addEventListener("mousemove", function(event) {
 
 
 /* index.html tooltips */
-const submitTooltip = document.querySelector(".tooltip");
+/* const submitTooltip = document.querySelector(".tooltip");
 const newPromptTooltip = document.querySelector(".tooltip2");
 const promptOfTheDayTooltip = document.querySelector(".tooltip3");
 const newPoemTooltip = document.querySelector(".tooltip4");
@@ -102,7 +102,7 @@ if (currentPage === 'index.html') {
     newPoemTooltip.style.top = y - 40 + "px";
     newPoemTooltip.style.left = x - 30 + "px";
   });
-}
+} */
 
 
 

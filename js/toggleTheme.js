@@ -1,14 +1,14 @@
 /* toggle light/dark */
 const themeImage = document.getElementById('theme-image');
 const body = document.body;
-const gearImage = document.getElementById('settings');
+/* const gearImage = document.getElementById('settings'); */
 const fightImage = document.getElementById('comp');
 const upvoteImage = document.getElementById('upvote');
 const profileImage = document.getElementById('profile-photo');
-const submitImg = document.getElementById('submit-img');
-const newPrompt = document.getElementById('new-prompt-button');
+/* const submitImg = document.getElementById('submit-img');
+ *//* const newPrompt = document.getElementById('new-prompt-button');
 const poemOfTheDay = document.getElementById('poem-of-the-day-button');
-const newPoem = document.getElementById('new-poem-button');
+const newPoem = document.getElementById('new-poem-button'); */
 const toggleInfoButton = document.getElementById('info-image');
 const toggleJournal = document.getElementById('journal');
 const dropdown = document.getElementById('dropdown-items');
@@ -29,20 +29,20 @@ function setLogoImage(isDarkMode) {
 }
 
 // Function to set the gear image based on the theme
-function setGearImage(isDarkMode) {
+/* function setGearImage(isDarkMode) {
   if (isDarkMode) {
     gearImage.src = 'images/gear-inverted.png';
   } else {
     gearImage.src = 'images/gear.png';
   }
-}
+} */
 
 // Function to set the comp image based on the theme
 function setCompImage(isDarkMode) {
   if (isDarkMode) {
-    fightImage.src = 'images/comp-night.png';
+    fightImage.src = 'images/comp-night.svg';
   } else {
-    fightImage.src = 'images/comp-day.png';
+    fightImage.src = 'images/comp-day.svg';
   }
 }
 
@@ -68,9 +68,9 @@ function setLiveImage(isDarkMode) {
 // Function to set the upvote image based on the theme
 function setUpvoteImage(isDarkMode) {
   if (isDarkMode) {
-    upvoteImage.src = 'images/upvote-night.png';
+    upvoteImage.src = 'images/contact-night.svg';
   } else {
-    upvoteImage.src = 'images/upvote-day.svg';
+    upvoteImage.src = 'images/contact-day.svg';
   }
 }
 
@@ -109,7 +109,7 @@ if (isDarkMode) {
   body.classList.add('dark-theme');
   themeImage.src = 'images/moon.png';
   themeImage.alt = 'Moon';
-  setGearImage(true);
+ /*  setGearImage(true); */
   setCompImage(true);
   setUpvoteImage(true);
   setProfileImage(true);
@@ -123,7 +123,7 @@ if (isDarkMode) {
   body.classList.add('light-theme');
   themeImage.src = 'images/sun.png';
   themeImage.alt = 'toggle to night';
-  setGearImage(false);
+  /* setGearImage(false); */
   setCompImage(false);
   setUpvoteImage(false);
   setProfileImage(false);
@@ -153,7 +153,7 @@ function toggleThemeAndImages() {
     localStorage.setItem('isDarkMode', 'true');
     themeImage.src = 'images/moon.png';
     themeImage.alt = 'Moon';
-    setGearImage(true);
+    /* setGearImage(true); */
     setCompImage(true);
     setUpvoteImage(true);
     setProfileImage(true);
@@ -171,7 +171,7 @@ function toggleThemeAndImages() {
     localStorage.setItem('isDarkMode', 'false');
     themeImage.src = 'images/sun.png';
     themeImage.alt = 'Sun';
-    setGearImage(false);
+    /* setGearImage(false); */
     setCompImage(false);
     setUpvoteImage(false);
     setProfileImage(false);
@@ -223,7 +223,7 @@ var currentPage = window.location.pathname.split('/').pop();
 
 if (currentPage === 'index.html') {
 
-  function setSubmitButton(isDarkMode) {
+/*   function setSubmitButton(isDarkMode) {
     {
      if (isDarkMode) {
        submitImg.src = 'images/submit-night.png';
@@ -231,31 +231,31 @@ if (currentPage === 'index.html') {
        submitImg.src = 'images/submit-day.png';
      }
     }
-  }
+  } */
 
-  function setNewPrompt(isDarkMode) {
+/*   function setNewPrompt(isDarkMode) {
     if (isDarkMode) {
       newPrompt.src = 'images/newPrompt-night.png';
     } else {
       newPrompt.src = 'images/newPrompt-day.png';
     }
-  }
+  } */
 
-  function setPoemOfTheDay(isDarkMode) {
+/*   function setPoemOfTheDay(isDarkMode) {
     if (isDarkMode) {
       poemOfTheDay.src = 'images/poemOfTheDay-night.png';
     } else {
       poemOfTheDay.src = 'images/poemOfTheDay-day.png';
     }
-  }
-
+  } */
+/* 
   function setNewPoemButton(isDarkMode) {
     if (isDarkMode) {
       newPoem.src = 'images/newPrompt-night.png';
     } else {
       newPoem.src = 'images/newPrompt-day.png';
     }
-  }
+  } */
 
   function setInfoButton(isDarkMode) {
     if (isDarkMode) {
@@ -268,18 +268,18 @@ if (currentPage === 'index.html') {
   if (isDarkMode) {
     themeImage.src = 'images/moon.png';
     themeImage.alt = 'Moon';
-    setSubmitButton(true);
-    setNewPrompt(true);
-    setPoemOfTheDay(true);
-    setNewPoemButton(true);
+/*     setSubmitButton(true);
+ */    /* setNewPrompt(true); */
+ /*    setPoemOfTheDay(true);
+    setNewPoemButton(true); */
     setInfoButton(true);
   } else {
     themeImage.src = 'images/sun.png';
     themeImage.alt = 'Sun';
-    setSubmitButton(false);
-    setNewPrompt(false);
+/*     setSubmitButton(false);
+ */  /*   setNewPrompt(false);
     setPoemOfTheDay(false);
-    setNewPoemButton(false);
+    setNewPoemButton(false); */
     setInfoButton(false);
   }
 
@@ -290,10 +290,10 @@ if (currentPage === 'index.html') {
       localStorage.setItem('isDarkMode', 'false');
       themeImage.src = 'images/sun.png';
       themeImage.alt = 'Sun';
-      setSubmitButton(false);
-      setNewPrompt(false);
+/*       setSubmitButton(false);
+ */      /* setNewPrompt(false);
       setPoemOfTheDay(false);
-      setNewPoemButton(false);
+      setNewPoemButton(false); */
       setInfoButton(false);
     } else {
       /* showRectButton.classList.remove('light');
@@ -301,10 +301,10 @@ if (currentPage === 'index.html') {
       localStorage.setItem('isDarkMode', 'true');
       themeImage.src = 'images/moon.png';
       themeImage.alt = 'Moon';
-      setSubmitButton(true);
-      setNewPrompt(true);
-      setPoemOfTheDay(true);
-      setNewPoemButton(true);
+/*       setSubmitButton(true);
+ */     /*  setNewPrompt(true); */
+     /*  setPoemOfTheDay(true);
+      setNewPoemButton(true); */
       setInfoButton(true);
     }
 
