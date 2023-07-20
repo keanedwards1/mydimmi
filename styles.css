@@ -1121,6 +1121,11 @@ The higher the alpha value, the more opaque the shadow appears. */
     margin: 0 12px;
   }
 
+  #title-logo {
+    margin-top: -5px;
+  }
+
+
   #logo {
     transform: scale(0.8);
     margin-left: 25px;
@@ -1228,7 +1233,11 @@ The higher the alpha value, the more opaque the shadow appears. */
 
 @media (max-width: 682px) {
   .menu-bar-buttons {
-    margin: 4px;
+    margin: 6px;
+  }
+
+  #title-logo {
+    margin-top: -5px;
   }
 
   #logo {
@@ -1257,7 +1266,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #upvote {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #upvote:hover {
@@ -1265,7 +1274,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #comp {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #comp:hover {
@@ -1273,7 +1282,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #learn {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #learn:hover {
@@ -1281,7 +1290,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #live {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #live:hover {
@@ -1289,7 +1298,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #settings {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #settings:hover {
@@ -1297,7 +1306,7 @@ The higher the alpha value, the more opaque the shadow appears. */
   }
 
   #journal {
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
 
   #journal:hover {
