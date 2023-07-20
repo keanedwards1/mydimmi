@@ -1,5 +1,5 @@
 /* dropdown menu */
-const dropdownContent = document.getElementById('dropdown');
+/* const dropdownContent = document.getElementById('dropdown');
 const dropdownItems = document.getElementById('dropdown-items');
 
 dropdownItems.style.display = 'none';
@@ -14,3 +14,4 @@ window.onclick = (event) => {
     dropdownItems.style.display = 'none';
   }
 };
+ */

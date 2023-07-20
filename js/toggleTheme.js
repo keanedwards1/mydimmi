@@ -11,8 +11,8 @@ const poemOfTheDay = document.getElementById('poem-of-the-day-button');
 const newPoem = document.getElementById('new-poem-button'); */
 const toggleInfoButton = document.getElementById('info-image');
 const toggleJournal = document.getElementById('journal');
-const dropdown = document.getElementById('dropdown-items');
-const resultRectangley = document.getElementById("result-rectangle");
+/* const dropdown = document.getElementById('dropdown-items');
+ */const resultRectangley = document.getElementById("result-rectangle");
 const learnImage = document.getElementById('learn');
 const liveImage = document.getElementById('live');
 const logoImage = document.getElementById('logo-img');
@@ -74,14 +74,14 @@ function setUpvoteImage(isDarkMode) {
   }
 }
 
-// Function to set the profile image based on the theme
+/* // Function to set the profile image based on the theme
 function setProfileImage(isDarkMode) {
   if (isDarkMode) {
     profileImage.src = 'images/profile-night.png';
   } else {
     profileImage.src = 'images/profile-day.png';
   }
-}
+} */
 
 // Function to set the journal image based on the theme
 function setJournalImage(isDarkMode) {
@@ -92,13 +92,13 @@ function setJournalImage(isDarkMode) {
   }
 }
 
-function setDropDownStyles(isDarkMode) {
+/* function setDropDownStyles(isDarkMode) {
   if (isDarkMode) {
     dropdown.classList.add('dark-theme');
   } else {
     dropdown.classList.add('light-theme');
   }
-}
+} */
 
 // Check for user preference in local storage
 const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
@@ -107,29 +107,29 @@ const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
 if (isDarkMode) {
   /*showRectButton.classList.add('dark');*/
   body.classList.add('dark-theme');
-  themeImage.src = 'images/moon.png';
+  themeImage.src = 'images/moon.svg';
   themeImage.alt = 'Moon';
  /*  setGearImage(true); */
   setCompImage(true);
   setUpvoteImage(true);
-  setProfileImage(true);
-  setJournalImage(true);
-  setDropDownStyles(true);
-  setLearnImage(true);
+/*   setProfileImage(true);
+ */  setJournalImage(true);
+/*   setDropDownStyles(true);
+ */  setLearnImage(true);
   setLiveImage(true);
   setLogoImage(true);
 } else {
   /*showRectButton.classList.add('light')*/
   body.classList.add('light-theme');
-  themeImage.src = 'images/sun.png';
+  themeImage.src = 'images/sun.svg';
   themeImage.alt = 'toggle to night';
   /* setGearImage(false); */
   setCompImage(false);
   setUpvoteImage(false);
-  setProfileImage(false);
+/*   setProfileImage(false); */
   setJournalImage(false);
-  setDropDownStyles(false);
-  setLearnImage(false);
+/*   setDropDownStyles(false);
+ */  setLearnImage(false);
   setLiveImage(false);
   setLogoImage(false);
 }
@@ -146,36 +146,36 @@ function toggleThemeAndImages() {
   if (body.classList.contains('light-theme')) {
     body.classList.remove('light-theme');
     body.classList.add('dark-theme');
-    dropdown.classList.remove('light-theme');
-    dropdown.classList.add('dark-theme');
+/*     dropdown.classList.remove('light-theme');
+    dropdown.classList.add('dark-theme'); */
     /*showRectButton.classList.remove('light');
     showRectButton.classList.add('dark');*/
     localStorage.setItem('isDarkMode', 'true');
-    themeImage.src = 'images/moon.png';
+    themeImage.src = 'images/moon.svg';
     themeImage.alt = 'Moon';
     /* setGearImage(true); */
     setCompImage(true);
     setUpvoteImage(true);
-    setProfileImage(true);
-    setJournalImage(true);
+/*     setProfileImage(true);
+ */    setJournalImage(true);
     setLearnImage(true);
     setLiveImage(true);
     setLogoImage(true);
   } else {
     body.classList.remove('dark-theme');
     body.classList.add('light-theme');
-    dropdown.classList.remove('dark-theme');
-    dropdown.classList.add('light-theme');
+/*     dropdown.classList.remove('dark-theme');
+    dropdown.classList.add('light-theme'); */
     /*showRectButton.classList.remove('dark');
     showRectButton.classList.add('light'); */
     localStorage.setItem('isDarkMode', 'false');
-    themeImage.src = 'images/sun.png';
+    themeImage.src = 'images/sun.svg';
     themeImage.alt = 'Sun';
     /* setGearImage(false); */
     setCompImage(false);
     setUpvoteImage(false);
-    setProfileImage(false);
-    setJournalImage(false);
+/*     setProfileImage(false);
+ */    setJournalImage(false);
     setLearnImage(false);
     setLiveImage(false);
     setLogoImage(false);
@@ -198,7 +198,19 @@ function toggleThemeAndImages() {
   } */
 
   /* need to figure out the file structure */
+  const itemName = document.getElementsByClassName('item-name');
 
+  // Loop through the titles and change the text color based on the theme
+  for (let i = 0; i < itemName.length; i++) {
+    const item = itemName[i];
+    if (body.classList.contains('light-theme')) {
+      // Set text color for light theme
+      item.style.color = 'black';
+    } else {
+      // Set text color for dark theme
+      item.style.color = 'white';
+    }
+  }
 }
 
 document.addEventListener('keydown', (event) => {
@@ -266,7 +278,7 @@ if (currentPage === 'index.html') {
   }
 
   if (isDarkMode) {
-    themeImage.src = 'images/moon.png';
+    themeImage.src = 'images/moon.svg';
     themeImage.alt = 'Moon';
 /*     setSubmitButton(true);
  */    /* setNewPrompt(true); */
@@ -274,7 +286,7 @@ if (currentPage === 'index.html') {
     setNewPoemButton(true); */
     setInfoButton(true);
   } else {
-    themeImage.src = 'images/sun.png';
+    themeImage.src = 'images/sun.svg';
     themeImage.alt = 'Sun';
 /*     setSubmitButton(false);
  */  /*   setNewPrompt(false);
@@ -288,7 +300,7 @@ if (currentPage === 'index.html') {
       /* showRectButton.classList.remove('dark');
       showRectButton.classList.add('light'); */
       localStorage.setItem('isDarkMode', 'false');
-      themeImage.src = 'images/sun.png';
+      themeImage.src = 'images/sun.svg';
       themeImage.alt = 'Sun';
 /*       setSubmitButton(false);
  */      /* setNewPrompt(false);
@@ -299,7 +311,7 @@ if (currentPage === 'index.html') {
       /* showRectButton.classList.remove('light');
       showRectButton.classList.add('dark'); */
       localStorage.setItem('isDarkMode', 'true');
-      themeImage.src = 'images/moon.png';
+      themeImage.src = 'images/moon.svg';
       themeImage.alt = 'Moon';
 /*       setSubmitButton(true);
  */     /*  setNewPrompt(true); */

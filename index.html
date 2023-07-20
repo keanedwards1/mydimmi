@@ -7,8 +7,8 @@
   <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
   <title>Dimmi Handmade</title>
   <script defer src="js/toggleTheme.js"></script>
-  <script defer src="js/profileDropdown.js"></script>
-  <script defer src="js/tooltip.js"></script>
+<!--   <script defer src="js/profileDropdown.js"></script>
+ -->  <script defer src="js/tooltip.js"></script>
   <script defer src="js/popup.js"></script>
 </head>
 <body>
@@ -41,7 +41,7 @@
         </a> -->
         <a id="logo-click" class="menu-bar-buttons" href="index.html">
           <img src="images/learn-day.png" alt="learn" id="learn">
-          <span class="menu-tooltips" id="learn-tooltip">Gallery</span>
+          <span class="menu-tooltips" id="learn-tooltip">Dimmi's Jewelry & Art</span>
         </a>
         <a id="logo-click" class="menu-bar-buttons" href="about.html">
           <img src="images/journal.png" alt="journal" id="journal">
@@ -53,26 +53,26 @@
         </a>
         <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
           <img src="images/comp-day.svg" alt="comp" id="comp">
-          <span class="menu-tooltips" id="comp-tooltip">Instagram</span>
+          <span class="menu-tooltips" id="comp-tooltip">Dimmi's Instagram</span>
         </a>
       </div>
 
       <!-- profile / toggle theme -->
       <div id="pref">
         <div id="theme-toggle-div">
-          <img id="theme-image" src="images/sun.png" alt="sun">
+          <img id="theme-image" src="images/sun.svg" alt="sun">
         </div>
-        <div id="profile-div">
+        <!-- <div id="profile-div">
           <div id="dropdown" class="dropdown-content">
             <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
             <div id="dropdown-items">
               <a href="profile.html" class="dropdown-item">Profile</a>
               <a href="rank.html" class="dropdown-item">Rank</a>
-              <!-- <a href="settings.html" class="dropdown-item">Settings</a> --> <!-- might put this here,
-              didn't want to remove it from the header for now -->
+                <a href="settings.html" class="dropdown-item">Settings</a>  might put this here,
+              didn't want to remove it from the header for now 
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </header>
@@ -81,39 +81,39 @@
       <div class="grid">
         <a class="grid-item" id="grid1" href="gallery/item1.html">
             <img src="images/gallery/1.jpeg" alt="Image 1">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid2" href="gallery/item2.html">
             <img src="images/gallery/2.jpeg" alt="Image 2">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid3" href="gallery/item3.html">
             <img src="images/gallery/3.jpeg" alt="Image 3">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid4" href="gallery/item1.html">
             <img src="images/gallery/4.jpeg" alt="Image 4">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid5" href="gallery/item2.html">
             <img src="images/gallery/5.jpeg" alt="Image 5">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid6" href="gallery/item3.html">
             <img src="images/gallery/6.jpeg" alt="Image 6">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid7" href="gallery/item4.html">
             <img src="images/gallery/7.jpeg" alt="Image 7">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid8" href="gallery/item5.html">
             <img src="images/gallery/8.jpeg" alt="Image 8">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid9" href="gallery/item6.html">
             <img src="images/gallery/9.jpeg" alt="Image 9">
-            <div class="title">Things & Stuff</div>
+            <div class="item-name">Things & Stuff</div>
         </a>
       </div>
     <!-- for the popup -->
@@ -142,7 +142,6 @@
         </div>
 
             <!-- TODO: add this -->
-        <div id="toggle-tooltip">gets rid of the hover boxes →</div>
 
 
         <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Contact Us</button>

@@ -16,8 +16,8 @@ const learnTooltip = document.querySelector('#learn-tooltip');
 learn.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
-  learnTooltip.style.top = y + 34 + "px";
-  learnTooltip.style.left = x - 23 + "px";
+  learnTooltip.style.top = y + 39 + "px";
+  learnTooltip.style.left = x - 49 + "px";
 });
 
 
@@ -27,8 +27,8 @@ const journalTooltip = document.querySelector('#journal-tooltip');
 journal.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
-  journalTooltip.style.top = y + 34 + "px";
-  journalTooltip.style.left = x - 23 + "px";
+  journalTooltip.style.top = y + 39 + "px";
+  journalTooltip.style.left = x - 36 + "px";
 });
 
 
@@ -38,8 +38,8 @@ const upvoteTooltip = document.querySelector('#upvote-tooltip');
 upvote.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
-  upvoteTooltip.style.top = y + 34 + "px";
-  upvoteTooltip.style.left = x - 23 + "px";
+  upvoteTooltip.style.top = y + 39 + "px";
+  upvoteTooltip.style.left = x - 27 + "px";
 });
 
 
@@ -49,8 +49,8 @@ const compTooltip = document.querySelector('#comp-tooltip');
 comp.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
-  compTooltip.style.top = y + 34 + "px";
-  compTooltip.style.left = x - 23 + "px";
+  compTooltip.style.top = y + 39 + "px";
+  compTooltip.style.left = x - 42 + "px";
 });
 
 /* need to figure out where toggleInfoButton was declared and then see 
@@ -64,7 +64,7 @@ toggleInfoButton.addEventListener("mousemove", function(event) {
   const x = event.clientX;
   const y = event.clientY;
   infoTooltip.style.top = y - 30 + "px";
-  infoTooltip.style.left = x - 43 + "px";
+  infoTooltip.style.left = x - 30 + "px";
 });
 
 

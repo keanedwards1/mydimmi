@@ -1,12 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Lucida Handwriting', cursive;
 }
 
 a:link {
   text-decoration: none;
   cursor: pointer;
-  color: rgb(106, 179, 167);
+  color: rgb(15, 15, 15);
 }
 
 html {
@@ -17,14 +18,22 @@ html {
 body {
   width: 100%;
 }
+
 body.dark-theme {
   background-color: #252f3f;
   color: #f5f3f3;
 }
+
 body.light-theme {
-  background-color: #ace4f0;
+  background-color: #e8f6ff;
   color: #1a1919;
 }
+
+body {
+  --background-color-dark: #252f3f;
+  --background-color-light: #e8f6ff;
+}
+
 
 /* body.light-theme #poem-prompt {
   color: #6c7a91;
@@ -48,7 +57,7 @@ body.dark-theme #poem-input {
 
 #logo-img {
   max-width: 100%;
-  height: auto;
+  height: auto;  
 }
 
 header {
@@ -107,6 +116,7 @@ this background as text colors */
   margin-top: 35px;
   flex-shrink: 0;
 }
+
 .logo-click {
   cursor: pointer;
 }
@@ -119,6 +129,7 @@ this background as text colors */
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 40px;
 }
 
 .menu-bar-buttons {
@@ -159,7 +170,7 @@ trying to query the divs to animate the tooltips */
   border: 1px solid #ccc;
 }
 
-#settings:hover + #settings-tooltip {
+#settings:hover+#settings-tooltip {
   display: flex;
 }
 
@@ -179,7 +190,7 @@ trying to query the divs to animate the tooltips */
   border: 1px solid #ccc;
 }
 
-#learn:hover + #learn-tooltip {
+#learn:hover+#learn-tooltip {
   display: flex;
 }
 
@@ -199,7 +210,7 @@ trying to query the divs to animate the tooltips */
   border: 1px solid #ccc;
 }
 
-#journal:hover + #journal-tooltip {
+#journal:hover+#journal-tooltip {
   display: flex;
 }
 
@@ -219,7 +230,7 @@ trying to query the divs to animate the tooltips */
   border: 1px solid #ccc;
 }
 
-#upvote:hover + #upvote-tooltip {
+#upvote:hover+#upvote-tooltip {
   display: flex;
 }
 
@@ -239,7 +250,7 @@ trying to query the divs to animate the tooltips */
   border: 1px solid #ccc;
 }
 
-#comp:hover + #comp-tooltip {
+#comp:hover+#comp-tooltip {
   display: flex;
 }
 
@@ -249,15 +260,21 @@ trying to query the divs to animate the tooltips */
   width: 230px;
   height: 50px;
   display: flex;
-  justify-content: center; /* Horizontally center the images */
-  align-items: center; /* Vertically center the images */
+  justify-content: center;
+  /* Horizontally center the images */
+  align-items: center;
+  /* Vertically center the images */
+  margin-top: 38px;
 }
 
-#theme-toggle-div, #profile-div {
+#theme-toggle-div,
+#profile-div {
   padding: 0 15px;
   box-sizing: border-box;
-  justify-content: center; /* Horizontally center the images within their respective divs */
-  align-items: center; /* Vertically center the images within their respective divs */
+  justify-content: center;
+  /* Horizontally center the images within their respective divs */
+  align-items: center;
+  /* Vertically center the images within their respective divs */
 }
 
 #theme-toggle-div {
@@ -298,12 +315,15 @@ trying to query the divs to animate the tooltips */
   0% {
     transform: translate(-50%, -50%) scale(1);
   }
+
   60% {
     transform: translate(-50%, -50%) scale(1.03);
   }
+
   90% {
     transform: translate(-50%, -50%) scale(1.001);
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
@@ -317,7 +337,7 @@ trying to query the divs to animate the tooltips */
   text-align: center;
   padding: 5px 5px;
   border-radius: 5px;
-  color:#0f0f0f;
+  color: #0f0f0f;
   animation: grow 1.5s infinite;
   position: relative;
   top: 35px;
@@ -332,7 +352,7 @@ trying to query the divs to animate the tooltips */
   text-align: center;
   padding: 5px 5px;
   border-radius: 5px;
-  color:#e7dede;
+  color: #e7dede;
   animation: grow 1.5s infinite;
   position: relative;
   top: 35px;
@@ -354,7 +374,7 @@ trying to query the divs to animate the tooltips */
   align-items: center;
 }
 
-body.dark-theme #title {
+/* body.dark-theme #title {
   color: #566b8e;
 }
 body.dark-theme #poem-input::placeholder {
@@ -368,7 +388,7 @@ body.dark-theme #poem-input::-moz-placeholder {
 }
 body.dark-theme #poem-input:-ms-input-placeholder {
   color: #566b8e;
-}
+} */
 
 #bottom-bar {
   margin-top: 50px;
@@ -378,7 +398,8 @@ body.dark-theme #poem-input:-ms-input-placeholder {
   height: auto;
   width: 100%;
 }
-#bottom-bar div{
+
+#bottom-bar div {
   flex: 1;
 }
 
@@ -393,13 +414,16 @@ body.dark-theme #poem-input:-ms-input-placeholder {
   display: flex;
   margin-right: 40px;
 }
+
 #info-image {
   width: 35px;
   opacity: 85%;
 }
+
 #info-image:hover {
   opacity: 70%;
 }
+
 .tooltip5 {
   position: fixed;
   display: none;
@@ -417,7 +441,8 @@ body.dark-theme #poem-input:-ms-input-placeholder {
   display: flex;
 }
 
-#infoButton, #info-image {
+#infoButton,
+#info-image {
   position: relative;
 }
 
@@ -512,7 +537,8 @@ body.dark-theme #poem-input:-ms-input-placeholder {
 #rectangleContainer {
   position: fixed;
   top: 0;
-  right: -420px; /* Start off-screen */
+  right: -420px;
+  /* Start off-screen */
   width: 275px;
   height: 540px;
   margin-top: 150px;
@@ -524,9 +550,12 @@ body.dark-theme #poem-input:-ms-input-placeholder {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #eae9e9, #0b0e13); /* Gradient colors */
-  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(to bottom, var(--background-color-light), var(--background-color-dark));
+  /* Gradient colors */
+  border-radius: 10px;
+  /* Rounded corners */
 }
+
 
 #closeButton {
   position: absolute;
@@ -539,7 +568,7 @@ body.dark-theme #poem-input:-ms-input-placeholder {
   font-family: monospace;
   margin-right: 4px;
   margin-top: -2px;
-  color:rgb(57, 71, 96);
+  color: rgb(57, 71, 96);
 }
 
 #toggle-tooltip {
@@ -547,27 +576,31 @@ body.dark-theme #poem-input:-ms-input-placeholder {
 }
 
 .custom-button {
-  background-color: #72d7f2;
+  font-family: 'Lucida Handwriting', cursive;
+  background-color: #252f3f;
+  color: #d4daea;
   transform: translate(50%, 50%);
-  color: rgb(241, 241, 241);
   transition: 0.2s ease-in-out;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-left: 18px;
 }
 
 .custom-button:hover {
-  background-color: #43caee;
+  background-color: #e8f6ff;
+  color: #374260;
 }
 
 .custom-button:active {
-  background-color: #43caee;
+  background-color: #e8f6ff;
+  color: #374260;
 }
 
 #popup-writing {
-  color:rgb(57, 71, 96);
+  color: rgb(57, 71, 96);
   padding: 20px;
   font-size: 14px;
   text-align: center;
@@ -638,7 +671,7 @@ h2 {
 }
 @media only screen and (max-width: 768px) {
   /* Styles for screens smaller than 768px */
-  /*
+/*
   #logo {
     float: none;
     display: block;
@@ -721,7 +754,8 @@ h2 {
 
 /* icon hover */
 
-#logo, #title,
+#logo,
+#title,
 .menu-bar-buttons img,
 #theme-image,
 #profile-photo,
@@ -741,7 +775,8 @@ h2 {
   transform: scale(1.2);
 }
 
-#logo:hover, #title:hover,
+#logo:hover,
+#title:hover,
 #theme-image:hover,
 #profile-photo:hover,
 .menu-bar-buttons img:hover {
@@ -768,7 +803,7 @@ h2 {
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* */ 
+/* */
 
 /*----------------------------------------------------------------
 ------------------------------- Mail Chimp -----------------------
@@ -815,14 +850,39 @@ h2 {
 
 .image-container {
   flex: 0 0 auto;
-  padding-right: 80px; /* Adjust the spacing between the image and text */
+  padding-right: 80px;
+  /* Adjust the spacing between the image and text */
 }
 
 .image-container img {
   height: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 1px 1px rgba(246, 246, 246, 10);
 }
+
+/* 10px represents the horizontal offset of the shadow. 
+It specifies how far the shadow should be positioned to the right or left of the element.
+Positive values move the shadow to the right, while negative values move it to the left.
+
+20px represents the vertical offset of the shadow. 
+It specifies how far the shadow should be positioned below or above the element. 
+Positive values move the shadow below the element, while negative values move it above.
+
+1000px represents the blur radius of the shadow. 
+It determines the amount of blurring applied to the shadow. 
+Higher values create a more spread-out and blurred shadow, 
+while lower values result in a sharper shadow. In this case, 
+1000px creates a very blurred shadow.
+
+5px represents the spread radius of the shadow. 
+It specifies how much the shadow should expand or contract from its original size. 
+Positive values expand the shadow, while negative values contract it. In this case, 
+5px expands the shadow slightly.
+
+rgba(246, 246, 246, 0.7) represents the color and opacity of the shadow. 
+It specifies the red, green, blue, and alpha (transparency) values of the shadow color. 
+In this case, the shadow color is a light gray (246, 246, 246) with an opacity of 0.7. 
+The higher the alpha value, the more opaque the shadow appears. */
 
 .text-container {
   flex: 1 1 auto;
@@ -832,8 +892,10 @@ h2 {
 }
 
 .text-container #about {
-  font-size: 40px; /* Adjust the font size of the header */
-  margin-bottom: 10px; /* Adjust the spacing below the header */
+  font-size: 40px;
+  /* Adjust the font size of the header */
+  margin-bottom: 10px;
+  /* Adjust the spacing below the header */
   margin-top: -5px;
   font-family: 'Lucida Handwriting', cursive;
   font-weight: bold;
@@ -849,7 +911,8 @@ h2 {
 }
 
 .text-container p {
-  margin-bottom: 8px; /* Adjust the spacing between paragraphs */
+  margin-bottom: 8px;
+  /* Adjust the spacing between paragraphs */
 }
 
 /*----------------------------------------------------------------
@@ -871,11 +934,12 @@ h2 {
   text-align: center;
   transition: opacity 0.2s ease-in-out;
   text-decoration: none !important;
-  color: black;
 }
 
 .grid-item:hover {
   opacity: 70%;
+  color: #6381e5;
+  color: #1C274C;
 }
 
 .grid-item img {
@@ -883,7 +947,8 @@ h2 {
   height: auto;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 .grid-item .title {
@@ -910,33 +975,38 @@ h2 {
 
 @media (max-width: 600px) {
   #header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   #name {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   #nav-bar {
-      text-align: left;
+    text-align: left;
   }
 }
+
 @media (min-width: 950px) {
   #work-bar {
-      margin-left: 400px;
+    margin-left: 400px;
   }
 }
+
 @media (max-width: 1250px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 950px) {
   #header {
     margin-left: 30px;
     margin-right: 30px;
   }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 75px;
@@ -949,9 +1019,10 @@ h2 {
     margin-left: 30px;
     margin-right: 15px;
   }
+
   #nav-bar {
-      margin-top: 20px;
-      margin-left: 80px;
+    margin-top: 20px;
+    margin-left: 80px;
   }
 
   .grid {
@@ -959,8 +1030,9 @@ h2 {
     padding-left: 65px;
     padding-right: 65px;
   }
+
   .grid-item-page {
-    display:flow-root;
+    display: flow-root;
   }
 }
 
@@ -994,6 +1066,7 @@ h2 {
   width: 100%;
   height: auto;
 }
+
 .description {
   /* Add your additional styles for the description section here */
   margin-top: 18px;
@@ -1017,20 +1090,22 @@ h2 {
 
 @media (max-width: 800px) {
   .description {
-      padding-left: 75px;
-      padding-right: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
+
 @media (max-width: 600px) {
   .description {
-      padding-left: 50px;
-      padding-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
+
 @media (max-width: 400px) {
   .description {
-      padding-left: 0px;
-      padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -1041,6 +1116,7 @@ h2 {
   #menu-bar {
     gap: 0px;
   }
+
   .menu-bar-buttons {
     margin: 0 12px;
   }
@@ -1049,6 +1125,7 @@ h2 {
     transform: scale(0.8);
     margin-left: 25px;
   }
+
   #logo:hover {
     transform: scale(0.8);
   }
@@ -1059,6 +1136,7 @@ h2 {
     margin-right: 15px;
     transition: margin-left 1s ease;
   }
+
   #title:hover {
     transform: scale(0.8);
   }
@@ -1066,6 +1144,7 @@ h2 {
   #upvote {
     transform: scale(0.8);
   }
+
   #upvote:hover {
     transform: scale(0.9);
   }
@@ -1073,6 +1152,7 @@ h2 {
   #comp {
     transform: scale(0.8);
   }
+
   #comp:hover {
     transform: scale(0.9);
   }
@@ -1080,6 +1160,7 @@ h2 {
   #learn {
     transform: scale(0.8);
   }
+
   #learn:hover {
     transform: scale(0.9);
   }
@@ -1087,6 +1168,7 @@ h2 {
   #live {
     transform: scale(0.8);
   }
+
   #live:hover {
     transform: scale(0.9);
   }
@@ -1094,6 +1176,7 @@ h2 {
   #settings {
     transform: scale(0.8);
   }
+
   #settings:hover {
     transform: scale(0.9);
   }
@@ -1101,6 +1184,7 @@ h2 {
   #journal {
     transform: scale(0.8);
   }
+
   #journal:hover {
     transform: scale(0.9);
   }
@@ -1116,6 +1200,7 @@ h2 {
   #theme-image {
     transform: scale(0.8);
   }
+
   #theme-image:hover {
     transform: scale(0.9);
   }
@@ -1123,9 +1208,11 @@ h2 {
   #profile-photo {
     transform: scale(0.8);
   }
+
   #profile-photo {
     transform: scale(0.9);
   }
+
   .image-container img {
     transform: scale(0.8);
   }
@@ -1134,12 +1221,13 @@ h2 {
 
 @media (max-width: 682px) {
   .menu-bar-buttons {
-    margin: -4px;
+    margin: 4px;
   }
 
   #logo {
     margin-left: 10px;
   }
+
   #title {
     margin-left: -20px;
     margin-right: 1px;
@@ -1152,69 +1240,69 @@ h2 {
   #pref {
     width: 140px;
   }
+
   #theme-toggle-div {
     padding: 0;
   }
+
   #profile-div {
     margin-left: -10px;
   }
 
   #upvote {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #upvote:hover {
     transform: scale(0.8);
   }
 
   #comp {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #comp:hover {
     transform: scale(0.8);
   }
 
   #learn {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #learn:hover {
     transform: scale(0.8);
   }
 
   #live {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #live:hover {
     transform: scale(0.8);
   }
 
   #settings {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #settings:hover {
     transform: scale(0.8);
   }
 
   #journal {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
+
   #journal:hover {
     transform: scale(0.8);
   }
+
   .image-container {
     padding-right: 5px;
-    margin-left: 50px;  
+    margin-left: 50px;
   }
+
   .image-container img {
     transform: scale(0.6);
   }
 }
-
-
-
-
-
-
-
-
-
-  
