@@ -92,6 +92,14 @@ function setJournalImage(isDarkMode) {
   }
 }
 
+function setInfoButton(isDarkMode) {
+  if (isDarkMode) {
+    toggleInfoButton.src = 'images/info-night.png';
+  } else {
+    toggleInfoButton.src = 'images/info.png';
+  }
+}
+
 /* function setDropDownStyles(isDarkMode) {
   if (isDarkMode) {
     dropdown.classList.add('dark-theme');
@@ -102,6 +110,8 @@ function setJournalImage(isDarkMode) {
 
 // Check for user preference in local storage
 const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
+
+const itemName = document.getElementsByClassName('item-name');
 
 // Set the initial theme and images based on local storage of user
 if (isDarkMode) {
@@ -118,6 +128,19 @@ if (isDarkMode) {
  */  setLearnImage(true);
   setLiveImage(true);
   setLogoImage(true);
+  setInfoButton(true);
+
+  for (let i = 0; i < itemName.length; i++) {
+    const item = itemName[i];
+    if (body.classList.contains('light-theme')) {
+      // Set text color for light theme
+      item.style.color = 'black';
+    } else {
+      // Set text color for dark theme
+      item.style.color = 'white';
+    }
+  }
+
 } else {
   /*showRectButton.classList.add('light')*/
   body.classList.add('light-theme');
@@ -132,6 +155,7 @@ if (isDarkMode) {
  */  setLearnImage(false);
   setLiveImage(false);
   setLogoImage(false);
+  setInfoButton(false);
 }
 
 /* var resultRectangleDisplayed = true;
@@ -161,6 +185,8 @@ function toggleThemeAndImages() {
     setLearnImage(true);
     setLiveImage(true);
     setLogoImage(true);
+    setInfoButton(true);
+
   } else {
     body.classList.remove('dark-theme');
     body.classList.add('light-theme');
@@ -179,6 +205,7 @@ function toggleThemeAndImages() {
     setLearnImage(false);
     setLiveImage(false);
     setLogoImage(false);
+    setInfoButton(false);
   }
 
  /*  if (resultRectangleDisplayed) {
@@ -198,7 +225,6 @@ function toggleThemeAndImages() {
   } */
 
   /* need to figure out the file structure */
-  const itemName = document.getElementsByClassName('item-name');
 
   // Loop through the titles and change the text color based on the theme
   for (let i = 0; i < itemName.length; i++) {
@@ -302,8 +328,8 @@ if (currentPage === 'index.html') {
       localStorage.setItem('isDarkMode', 'false');
       themeImage.src = 'images/sun.svg';
       themeImage.alt = 'Sun';
-/*       setSubmitButton(false);
- */      /* setNewPrompt(false);
+      /* setSubmitButton(false);
+      setNewPrompt(false);
       setPoemOfTheDay(false);
       setNewPoemButton(false); */
       setInfoButton(false);
@@ -313,9 +339,9 @@ if (currentPage === 'index.html') {
       localStorage.setItem('isDarkMode', 'true');
       themeImage.src = 'images/moon.svg';
       themeImage.alt = 'Moon';
-/*       setSubmitButton(true);
- */     /*  setNewPrompt(true); */
-     /*  setPoemOfTheDay(true);
+      /* setSubmitButton(true);
+      setNewPrompt(true);
+      setPoemOfTheDay(true);
       setNewPoemButton(true); */
       setInfoButton(true);
     }

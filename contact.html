@@ -1,157 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
-  <title>Dimmi Handmade</title>
-  <script defer src="js/toggleTheme.js"></script>
-  <script defer src="js/profileDropdown.js"></script>
-  <script defer src="js/tooltip.js"></script>
-  <script defer src="js/popup.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
+    <title>Dimmi Handmade</title>
+    <script defer src="js/toggleTheme.js"></script>
+  <!--   <script defer src="js/profileDropdown.js"></script>
+  -->  <script defer src="js/tooltip.js"></script>
+    <script defer src="js/popup.js"></script>
+  </head>
+  <body>
 
-  <header>
+    <header>
 
-    <!-- home is the div with all the header elements in it (kinda obv) -->
-    <div id="home">
+      <!-- home is the div with all the header elements in it (kinda obv) -->
+      <div id="home">
 
-      <!-- logo -->
-      <div id="title-logo">
-        <div id="logo" style="display: inline-block; vertical-align: middle;">
-          <a id="logo-click" href="index.html">
-            <img id="logo-img" src="images/dimmi.png" width="60">
+        <!-- logo -->
+        <div id="title-logo">
+          <div id="logo" style="display: inline-block; vertical-align: middle;">
+            <a id="logo-click" href="about.html">
+              <img id="logo-img" src="images/dimmi.png" width="60">
+            </a>
+          </div>
+          <!-- home button -->
+          <h2 id="title" class="title" style="display: inline-block;
+          vertical-align: middle;">
+          <span style="cursor: pointer;" onclick="window.location.href=
+          'index.html'">Dimmi Handmade</span>
+          </h2>
+        </div>
+
+        <!-- page selection -->
+        <div id="menu-bar">
+          <!-- <a id="logo-click" class="menu-bar-buttons" href="settings.html">
+            <img src="images/gear-inverted.png" alt="settings" id="settings">
+            <span class="menu-tooltips" id="settings-tooltip">settings</span>
+          </a> -->
+          <a id="logo-click" class="menu-bar-buttons" href="about.html">
+            <img src="images/journal.png" alt="journal" id="journal">
+            <span class="menu-tooltips" id="journal-tooltip">About Dimmi</span>
+          </a>
+          <a id="logo-click" class="menu-bar-buttons" href="contact.html">
+            <img src="images/contact-day.svg" alt="upvote" id="upvote">
+            <span class="menu-tooltips" id="upvote-tooltip">Contact Us</span>
+          </a>
+          <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+            <img src="images/comp-day.svg" alt="comp" id="comp">
+            <span class="menu-tooltips" id="comp-tooltip">Dimmi's Instagram</span>
+          </a>
+          <a id="logo-click" class="menu-bar-buttons" href="index.html">
+            <img src="images/learn-day.png" alt="learn" id="learn">
+            <span class="menu-tooltips" id="learn-tooltip">Dimmi's Jewelry & Art</span>
           </a>
         </div>
-        <!-- home button -->
-        <h2 id="title" class="title" style="display: inline-block;
-        vertical-align: middle;">
-        <span style="cursor: pointer;" onclick="window.location.href=
-        'index.html'">Dimmi Handmade</span>
-        </h2>
-      </div>
 
-      <!-- page selection -->
-      <div id="menu-bar">
-        <a id="logo-click" class="menu-bar-buttons" href="settings.html">
-          <img src="images/gear-inverted.png" alt="settings" id="settings">
-          <span class="menu-tooltips" id="settings-tooltip">settings</span>
-        </a>
-        <a id="logo-click" class="menu-bar-buttons" href="learn.html">
-          <img src="images/learn-day.png" alt="learn" id="learn">
-          <span class="menu-tooltips" id="learn-tooltip">learn</span>
-        </a>
-        <a id="logo-click" class="menu-bar-buttons" href="journal.html">
-          <img src="images/journal.png" alt="journal" id="journal">
-          <span class="menu-tooltips" id="journal-tooltip">journal</span>
-        </a>
-        <a id="logo-click" class="menu-bar-buttons" href="upvote.html">
-          <img src="images/contact-day.svg" alt="upvote" id="upvote">
-          <span class="menu-tooltips" id="upvote-tooltip">upvote</span>
-        </a>
-        <a id="logo-click" class="menu-bar-buttons" href="comp.html">
-          <img src="images/comp-day.svg" alt="comp" id="comp">
-          <span class="menu-tooltips" id="comp-tooltip">comp</span>
-        </a>
-      </div>
-
-      <!-- profile / toggle theme -->
-      <div id="pref">
-        <div id="theme-toggle-div">
-          <img id="theme-image" src="images/sun.svg" alt="sun">
-        </div>
-        <div id="profile-div">
-          <div id="dropdown" class="dropdown-content">
-            <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
-            <div id="dropdown-items">
-              <a href="profile.html" class="dropdown-item">Profile</a>
-              <a href="rank.html" class="dropdown-item">Rank</a>
-              <!-- <a href="settings.html" class="dropdown-item">Settings</a> --> <!-- might put this here,
-              didn't want to remove it from the header for now -->
+        <!-- profile / toggle theme -->
+        <div id="pref">
+          <div id="theme-toggle-div">
+            <img id="theme-image" src="images/sun.svg" alt="sun">
+          </div>
+          <!-- <div id="profile-div">
+            <div id="dropdown" class="dropdown-content">
+              <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
+              <div id="dropdown-items">
+                <a href="profile.html" class="dropdown-item">Profile</a>
+                <a href="rank.html" class="dropdown-item">Rank</a>
+                  <a href="settings.html" class="dropdown-item">Settings</a>  might put this here,
+                didn't want to remove it from the header for now 
+              </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div id="products-wrapper">
-        <div id="mc_embed_shell">
-            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-              #mc_embed_signup{background: #91b99d; false; clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px; border-radius: 10px; padding: 7px}
-              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      </style>
-      <div id="mc_embed_signup">
-          <form action="https://gmail.us9.list-manage.com/subscribe/post?u=9598889f9a43720b03b41b830&amp;id=090b325e81&amp;f_id=00e020e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-              <div id="mc_embed_signup_scroll"><h2>Sign Up For Emails About Dimmi Handmade</h2>
-                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text" style="display:none;"></span></div><div class="mc-field-group"><label for="mce-FNAME">Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
-              <div id="mce-responses" class="clear foot">
-                  <div class="response" id="mce-error-response" style="display: none;"></div>
-                  <div class="response" id="mce-success-response" style="display: none;"></div>
-              </div>
-          <div aria-hidden="true" style="position: absolute; left: -5000px;">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-              <input type="text" name="b_9598889f9a43720b03b41b830_090b325e81" tabindex="-1" value="">
-          </div>
-              <div class="optionalParent">
-                  <div class="clear foot">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                    <!--                       <p class="brandingLogo" style="margin: 0px auto;"><a href="http://eepurl.com/ivUikU" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="referral badge"></a></p>
- -->                  </div>
-              </div>
-          </div>
-      </form>
-      </div>
-      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-      
-    </div>
-    <!-- for the popup -->
-    <div id="bottom-bar">
-      <a id="logo-click" class="menu-bar-buttons" href="live.html">
-        <img src="images/live-day.png" alt="live" id="live">
-      </a>
-      <a id="infoButton">
-        <img src="images/info.png" alt="info" id="info-image">
-        <span class="tooltip5">cmnd + i</span>
-        <!-- <button id="showRectButton" class="popup-button">info</button> -->
-      </a>
-    </div>
-
-    <!-- this is the popup that pops up when the user presses cmd + i -->
-    <div id="rectangleContainer">
-      <div id="rectangle">
-        <button id="closeButton">x</button>
-        <div id="popup-writing">
-          <h3>
-            <div class="vector-art">cmd + i toggles the info page</div>
-          </h3>
-          <h3>
-            <div class="vector-art">cmd + k toggles light/dark theme</div>
-          </h3>
+    <main>
+      <div id="products-wrapper">
+          <div id="mc_embed_shell">
+              <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+                #mc_embed_signup{background: #91b99d; false; clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px; border-radius: 10px; padding: 7px}
+                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+            <form action="https://gmail.us9.list-manage.com/subscribe/post?u=9598889f9a43720b03b41b830&amp;id=090b325e81&amp;f_id=00e020e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div id="mc_embed_signup_scroll"><h2>Sign Up For Emails About Dimmi Handmade</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                    <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text" style="display:none;"></span></div><div class="mc-field-group"><label for="mce-FNAME">Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                <input type="text" name="b_9598889f9a43720b03b41b830_090b325e81" tabindex="-1" value="">
+            </div>
+                <div class="optionalParent">
+                    <div class="clear foot">
+                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                      <!--                       <p class="brandingLogo" style="margin: 0px auto;"><a href="http://eepurl.com/ivUikU" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="referral badge"></a></p>
+      -->           </div>
+                </div>
+            </div>
+        </form>
         </div>
-
-            <!-- TODO: add this -->
-        <div id="toggle-tooltip">gets rid of the hover boxes →</div>
-
-        <div class="grid-container">
-          <div class="item">Item 1</div>
-          <div class="item">Item 2</div>
-          <div class="item">Item 3</div>
-          <div class="item">Item 4</div>
-          <div class="item">Item 5</div>
-          <div class="item">Item 6</div>
-        </div>
-
-
-        <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Click me</button>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+        
       </div>
-    </div>
-  </main>
-</body>
+      <!-- for the popup -->
+      <div id="bottom-bar">
+        <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+          <img src="images/live-day.png" alt="live" id="live">
+        </a>
+        <a id="infoButton">
+          <img src="images/info.png" alt="info" id="info-image">
+          <span class="tooltip5">cmnd + i</span>
+          <!-- <button id="showRectButton" class="popup-button">info</button> -->
+        </a>
+      </div>
+
+      <!-- this is the popup that pops up when the user presses cmd + i -->
+      <div id="rectangleContainer">
+        <div id="rectangle">
+          <button id="closeButton">x</button>
+          <div id="popup-writing">
+            <h3>
+              <div class="vector-art">cmd + i toggles the info page</div>
+            </h3>
+            <h3>
+              <div class="vector-art">cmd + k toggles light/dark theme</div>
+            </h3>
+          </div>
+
+              <!-- TODO: add this -->
+
+
+          <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Contact Us</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

@@ -7,8 +7,8 @@
   <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
   <title>Dimmi Handmade</title>
   <script defer src="js/toggleTheme.js"></script>
-  <script defer src="js/profileDropdown.js"></script>
-  <script defer src="js/tooltip.js"></script>
+<!--   <script defer src="js/profileDropdown.js"></script>
+ -->  <script defer src="js/tooltip.js"></script>
   <script defer src="js/popup.js"></script>
 </head>
 <body>
@@ -21,7 +21,7 @@
       <!-- logo -->
       <div id="title-logo">
         <div id="logo" style="display: inline-block; vertical-align: middle;">
-          <a id="logo-click" href="index.html">
+          <a id="logo-click" href="about.html">
             <img id="logo-img" src="images/dimmi.png" width="60">
           </a>
         </div>
@@ -39,11 +39,7 @@
           <img src="images/gear-inverted.png" alt="settings" id="settings">
           <span class="menu-tooltips" id="settings-tooltip">settings</span>
         </a> -->
-        <a id="logo-click" class="menu-bar-buttons" href="index.html">
-          <img src="images/learn-day.png" alt="learn" id="learn">
-          <span class="menu-tooltips" id="learn-tooltip">Gallery</span>
-        </a>
-        <a id="logo-click" class="menu-bar-buttons" href="journal.html">
+        <a id="logo-click" class="menu-bar-buttons" href="about.html">
           <img src="images/journal.png" alt="journal" id="journal">
           <span class="menu-tooltips" id="journal-tooltip">About Dimmi</span>
         </a>
@@ -53,7 +49,11 @@
         </a>
         <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
           <img src="images/comp-day.svg" alt="comp" id="comp">
-          <span class="menu-tooltips" id="comp-tooltip">Instagram</span>
+          <span class="menu-tooltips" id="comp-tooltip">Dimmi's Instagram</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="index.html">
+          <img src="images/learn-day.png" alt="learn" id="learn">
+          <span class="menu-tooltips" id="learn-tooltip">Dimmi's Jewelry & Art</span>
         </a>
       </div>
 
@@ -62,76 +62,77 @@
         <div id="theme-toggle-div">
           <img id="theme-image" src="images/sun.svg" alt="sun">
         </div>
-        <div id="profile-div">
+        <!-- <div id="profile-div">
           <div id="dropdown" class="dropdown-content">
             <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
             <div id="dropdown-items">
               <a href="profile.html" class="dropdown-item">Profile</a>
               <a href="rank.html" class="dropdown-item">Rank</a>
-              <!-- <a href="settings.html" class="dropdown-item">Settings</a> --> <!-- might put this here,
-              didn't want to remove it from the header for now -->
+                <a href="settings.html" class="dropdown-item">Settings</a>  might put this here,
+              didn't want to remove it from the header for now 
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </header>
 
   <main>
-    <div id="products-wrapper">
-        <div class="container">
-            <div class="image-container">
-              <img src="images/about.jpg" alt="Image description">
-            </div>
-            <div class="text-container">
-              <p id="about">ABOUT</p>
-              <p id="info">Dimmi Handmade is...</p>
-              <p id="email">Email <b>alessia.alessia@alessia.gov</b></p>
-              <p>Phone <b>1-800-CARSRUS</b></p>
-            </div>
+        <!-- about  -->
+        <!-- about  -->
+        <!-- about  -->
+        <!-- about  -->
+
+        <div id="products-wrapper">
+          <div class="container">
+              <div class="image-container">
+                <img src="images/about.jpg" alt="Image description">
+              </div>
+              <div class="text-container">
+                <p id="about">ABOUT</p>
+                <p id="info">Dimmi Handmade is...</p>
+                <p id="email">Email <b>alessia.alessia@alessia.gov</b></p>
+                <p>Phone <b>1-800-CARSRUS</b></p>
+              </div>
+          </div>
         </div>
+        
+        
+                <!-- about  -->
+                <!-- about  -->
+                <!-- about  -->
+                <!-- about  -->
+<!-- for the popup -->
+<div id="bottom-bar">
+  <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+    <img src="images/live-day.png" alt="live" id="live">
+  </a>
+  <a id="infoButton">
+    <img src="images/info.png" alt="info" id="info-image">
+    <span class="tooltip5">cmnd + i</span>
+    <!-- <button id="showRectButton" class="popup-button">info</button> -->
+  </a>
+</div>
+
+<!-- this is the popup that pops up when the user presses cmd + i -->
+<div id="rectangleContainer">
+  <div id="rectangle">
+    <button id="closeButton">x</button>
+    <div id="popup-writing">
+      <h3>
+        <div class="vector-art">cmd + i toggles the info page</div>
+      </h3>
+      <h3>
+        <div class="vector-art">cmd + k toggles light/dark theme</div>
+      </h3>
     </div>
-    <!-- for the popup -->
-    <div id="bottom-bar">
-      <a id="logo-click" class="menu-bar-buttons" href="live.html">
-        <img src="images/live-day.png" alt="live" id="live">
-      </a>
-      <a id="infoButton">
-        <img src="images/info.png" alt="info" id="info-image">
-        <span class="tooltip5">cmnd + i</span>
-        <!-- <button id="showRectButton" class="popup-button">info</button> -->
-      </a>
-    </div>
 
-    <!-- this is the popup that pops up when the user presses cmd + i -->
-    <div id="rectangleContainer">
-      <div id="rectangle">
-        <button id="closeButton">x</button>
-        <div id="popup-writing">
-          <h3>
-            <div class="vector-art">cmd + i toggles the info page</div>
-          </h3>
-          <h3>
-            <div class="vector-art">cmd + k toggles light/dark theme</div>
-          </h3>
-        </div>
-
-            <!-- TODO: add this -->
-        <div id="toggle-tooltip">gets rid of the hover boxes →</div>
-
-        <div class="grid-container">
-          <div class="item">Item 1</div>
-          <div class="item">Item 2</div>
-          <div class="item">Item 3</div>
-          <div class="item">Item 4</div>
-          <div class="item">Item 5</div>
-          <div class="item">Item 6</div>
-        </div>
+        <!-- TODO: add this -->
 
 
-        <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Contact Us</button>
-      </div>
-    </div>
-  </main>
+    <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Contact Us</button>
+  </div>
+</div>
+</main>
 </body>
 </html>

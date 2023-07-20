@@ -7,7 +7,7 @@
 a:link {
   text-decoration: none;
   cursor: pointer;
-  color: rgb(15, 15, 15);
+  color:#000;
 }
 
 html {
@@ -1212,7 +1212,14 @@ The higher the alpha value, the more opaque the shadow appears. */
   #profile-photo {
     transform: scale(0.9);
   }
-
+  .text-container {
+    margin-right: 20px;
+    transform: scale(0.8);
+    margin-top: 10px;
+  }
+  .image-container {
+    padding-right: 20px;
+  }
   .image-container img {
     transform: scale(0.8);
   }
@@ -1296,13 +1303,26 @@ The higher the alpha value, the more opaque the shadow appears. */
   #journal:hover {
     transform: scale(0.8);
   }
+  
+  .container {
+    padding: 40px;
+  }
 
   .image-container {
-    padding-right: 5px;
+    padding-right: 1px;
     margin-left: 50px;
   }
 
   .image-container img {
     transform: scale(0.6);
+  }
+
+  .text-container {
+    margin-right: 20px;
+    transform: scale(0.8);
+    margin-top: 23px;
+    padding-left: 0px;
+    transform: scale(0.6);
+    margin-left: -20px;
   }
 }
