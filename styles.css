@@ -4,6 +4,11 @@
   font-family: 'Lucida Handwriting', cursive;
 }
 
+.hide-on-load {
+  display: none;
+}
+
+
 a:link {
   text-decoration: none;
   cursor: pointer;
@@ -133,7 +138,7 @@ this background as text colors */
 }
 
 .menu-bar-buttons {
-  margin: 0 20px;
+  margin: 0 10px;
   box-sizing: border-box;
   margin-left: 10px;
 }
@@ -391,10 +396,13 @@ body.dark-theme #poem-input:-ms-input-placeholder {
 } */
 
 #bottom-bar {
-  margin-top: 50px;
-  margin-bottom: 20px;
+  background-color: #dfe3ed;
+  padding-top: 90px;
+  margin-top: 40px;
+  padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   height: auto;
   width: 100%;
 }
@@ -405,23 +413,24 @@ body.dark-theme #poem-input:-ms-input-placeholder {
 
 #live {
   width: 80px;
-  margin-left: 30px;
 }
 
 #infoButton {
   height: 35px;
   cursor: pointer;
   display: flex;
-  margin-right: 40px;
+  margin-right: 25px;
+  margin-left: 10px;
 }
 
 #info-image {
   width: 35px;
   opacity: 85%;
+  transform: scale(0.85);
 }
 
 #info-image:hover {
-  opacity: 70%;
+  opacity: 90%;
 }
 
 .tooltip5 {
@@ -772,7 +781,7 @@ h2 {
 #new-poem-button:hover,
 #submit-img:hover,
 #info-image:hover {
-  transform: scale(1.2);
+  transform: scale(0.9);
 }
 
 #logo:hover,
@@ -857,7 +866,7 @@ h2 {
 .image-container img {
   height: 300px;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(246, 246, 246, 10);
+  box-shadow: inset 1px 1px 1px 1px rgba(246, 246, 246, 10);
 }
 
 /* 10px represents the horizontal offset of the shadow. 

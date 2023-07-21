@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
+  <link rel="icon" type="image/png" href="/images/dimmi.png">
   <title>Dimmi Handmade</title>
-  <script defer src="js/toggleTheme.js"></script>
-<!--   <script defer src="js/profileDropdown.js"></script>
- -->  <script defer src="js/tooltip.js"></script>
-  <script defer src="js/popup.js"></script>
 </head>
 <body>
 
@@ -21,7 +17,7 @@
       <!-- logo -->
       <div id="title-logo">
         <div id="logo" style="display: inline-block; vertical-align: middle;">
-          <a id="logo-click" href="about.html">
+          <a id="logo-click" href="index.html">
             <img id="logo-img" src="images/dimmi.png" width="60">
           </a>
         </div>
@@ -29,7 +25,7 @@
         <h2 id="title" class="title" style="display: inline-block;
         vertical-align: middle;">
         <span style="cursor: pointer;" onclick="window.location.href=
-        'index.html'">Dimmi Handmade</span>
+        'about.html'">Dimmi Handmade</span>
         </h2>
       </div>
 
@@ -73,6 +69,11 @@
             </div>
           </div>
         </div> -->
+        <a id="infoButton">
+          <img src="images/info.png" alt="info" id="info-image">
+          <span class="tooltip5">cmnd + i</span>
+          <!-- <button id="showRectButton" class="popup-button">info</button> -->
+        </a>
       </div>
     </div>
   </header>
@@ -86,7 +87,7 @@
         <div id="products-wrapper">
           <div class="container">
               <div class="image-container">
-                <img src="images/about.jpg" alt="Image description">
+                <img src="images/about.jpg" id="about-image" alt="Image description">
               </div>
               <div class="text-container">
                 <p id="about">ABOUT</p>
@@ -104,13 +105,8 @@
                 <!-- about  -->
 <!-- for the popup -->
 <div id="bottom-bar">
-  <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+  <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://drawing.garden/">
     <img src="images/live-day.png" alt="live" id="live">
-  </a>
-  <a id="infoButton">
-    <img src="images/info.png" alt="info" id="info-image">
-    <span class="tooltip5">cmnd + i</span>
-    <!-- <button id="showRectButton" class="popup-button">info</button> -->
   </a>
 </div>
 
@@ -134,5 +130,8 @@
   </div>
 </div>
 </main>
+<script defer src="js/toggleTheme.js"></script>
+<script defer src="js/tooltip.js"></script>
+<script defer src="js/popup.js"></script>
 </body>
 </html>

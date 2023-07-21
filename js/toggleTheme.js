@@ -1,23 +1,18 @@
 /* toggle light/dark */
 const themeImage = document.getElementById('theme-image');
 const body = document.body;
-/* const gearImage = document.getElementById('settings'); */
 const fightImage = document.getElementById('comp');
 const upvoteImage = document.getElementById('upvote');
 const profileImage = document.getElementById('profile-photo');
-/* const submitImg = document.getElementById('submit-img');
- *//* const newPrompt = document.getElementById('new-prompt-button');
-const poemOfTheDay = document.getElementById('poem-of-the-day-button');
-const newPoem = document.getElementById('new-poem-button'); */
 const toggleInfoButton = document.getElementById('info-image');
 const toggleJournal = document.getElementById('journal');
-/* const dropdown = document.getElementById('dropdown-items');
- */const resultRectangley = document.getElementById("result-rectangle");
+const resultRectangley = document.getElementById("result-rectangle");
 const learnImage = document.getElementById('learn');
 const liveImage = document.getElementById('live');
 const logoImage = document.getElementById('logo-img');
-
-/* const showRectButton = document.getElementById('showRectButton'); */
+const aboutImage = document.getElementById('about-image');
+const bottomBar = document.getElementById('bottom-bar');
+const itemName = document.getElementsByClassName('item-name');
 
 // Function to set the logo image based on the theme 
 function setLogoImage(isDarkMode) {
@@ -27,15 +22,6 @@ function setLogoImage(isDarkMode) {
     logoImage.src = 'images/dimmi.png';
   }
 }
-
-// Function to set the gear image based on the theme
-/* function setGearImage(isDarkMode) {
-  if (isDarkMode) {
-    gearImage.src = 'images/gear-inverted.png';
-  } else {
-    gearImage.src = 'images/gear.png';
-  }
-} */
 
 // Function to set the comp image based on the theme
 function setCompImage(isDarkMode) {
@@ -74,15 +60,6 @@ function setUpvoteImage(isDarkMode) {
   }
 }
 
-/* // Function to set the profile image based on the theme
-function setProfileImage(isDarkMode) {
-  if (isDarkMode) {
-    profileImage.src = 'images/profile-night.png';
-  } else {
-    profileImage.src = 'images/profile-day.png';
-  }
-} */
-
 // Function to set the journal image based on the theme
 function setJournalImage(isDarkMode) {
   if (isDarkMode) {
@@ -92,6 +69,7 @@ function setJournalImage(isDarkMode) {
   }
 }
 
+// Function to set the Info Button style
 function setInfoButton(isDarkMode) {
   if (isDarkMode) {
     toggleInfoButton.src = 'images/info-night.png';
@@ -100,35 +78,32 @@ function setInfoButton(isDarkMode) {
   }
 }
 
-/* function setDropDownStyles(isDarkMode) {
+// function to set the bottom bar color
+function setBottomBarColor(isDarkMode) {
   if (isDarkMode) {
-    dropdown.classList.add('dark-theme');
+    bottomBar.style.backgroundColor = '#1f2531';
+/*     bottomBar.style.backgroundImage = 'url(images/tangerine.jpeg)'; */
   } else {
-    dropdown.classList.add('light-theme');
+    bottomBar.style.backgroundColor = '#edf1f3';
   }
-} */
+}
 
 // Check for user preference in local storage
 const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
 
-const itemName = document.getElementsByClassName('item-name');
-
 // Set the initial theme and images based on local storage of user
 if (isDarkMode) {
-  /*showRectButton.classList.add('dark');*/
   body.classList.add('dark-theme');
   themeImage.src = 'images/moon.svg';
   themeImage.alt = 'Moon';
- /*  setGearImage(true); */
   setCompImage(true);
   setUpvoteImage(true);
-/*   setProfileImage(true);
- */  setJournalImage(true);
-/*   setDropDownStyles(true);
- */  setLearnImage(true);
+  setJournalImage(true);
+  setLearnImage(true);
   setLiveImage(true);
   setLogoImage(true);
   setInfoButton(true);
+  setBottomBarColor(true);
 
   for (let i = 0; i < itemName.length; i++) {
     const item = itemName[i];
@@ -140,92 +115,50 @@ if (isDarkMode) {
       item.style.color = 'white';
     }
   }
-
 } else {
-  /*showRectButton.classList.add('light')*/
   body.classList.add('light-theme');
   themeImage.src = 'images/sun.svg';
   themeImage.alt = 'toggle to night';
-  /* setGearImage(false); */
   setCompImage(false);
   setUpvoteImage(false);
-/*   setProfileImage(false); */
   setJournalImage(false);
-/*   setDropDownStyles(false);
- */  setLearnImage(false);
+  setLearnImage(false);
   setLiveImage(false);
   setLogoImage(false);
   setInfoButton(false);
+  setBottomBarColor(false);
 }
 
-/* var resultRectangleDisplayed = true;
-if (resultRectangley.style.display == "block") {
-  resultRectangleDisplayed = true;
-} else {
-  resultRectangleDisplayed = false;
-} */
-
 function toggleThemeAndImages() {
-
   if (body.classList.contains('light-theme')) {
     body.classList.remove('light-theme');
     body.classList.add('dark-theme');
-/*     dropdown.classList.remove('light-theme');
-    dropdown.classList.add('dark-theme'); */
-    /*showRectButton.classList.remove('light');
-    showRectButton.classList.add('dark');*/
     localStorage.setItem('isDarkMode', 'true');
     themeImage.src = 'images/moon.svg';
     themeImage.alt = 'Moon';
-    /* setGearImage(true); */
     setCompImage(true);
     setUpvoteImage(true);
-/*     setProfileImage(true);
- */    setJournalImage(true);
+    setJournalImage(true);
     setLearnImage(true);
     setLiveImage(true);
     setLogoImage(true);
     setInfoButton(true);
-
+    setBottomBarColor(true);
   } else {
     body.classList.remove('dark-theme');
     body.classList.add('light-theme');
-/*     dropdown.classList.remove('dark-theme');
-    dropdown.classList.add('light-theme'); */
-    /*showRectButton.classList.remove('dark');
-    showRectButton.classList.add('light'); */
     localStorage.setItem('isDarkMode', 'false');
     themeImage.src = 'images/sun.svg';
     themeImage.alt = 'Sun';
-    /* setGearImage(false); */
     setCompImage(false);
     setUpvoteImage(false);
-/*     setProfileImage(false);
- */    setJournalImage(false);
+    setJournalImage(false);
     setLearnImage(false);
     setLiveImage(false);
     setLogoImage(false);
     setInfoButton(false);
+    setBottomBarColor(false);
   }
-
- /*  if (resultRectangleDisplayed) {
-    resultRectangley.style.display == "block";
-  } */
-/* 
-  if (isRectangleVisible) {
-    rectangleContainer.style.right = '0'; // Show the rectangle
-  } else {
-    rectangleContainer.style.right = '-420px'; // Hide the rectangle
-  }
-  
-  if (isPoemRectangleVisible) {
-    resultRectangle.style.display = 'block'; // Show the result rectangle
-  } else {
-    resultRectangle.style.display = 'none'; // Hide the result rectangle
-  } */
-
-  /* need to figure out the file structure */
-
   // Loop through the titles and change the text color based on the theme
   for (let i = 0; i < itemName.length; i++) {
     const item = itemName[i];
@@ -259,7 +192,42 @@ themeImage.addEventListener('click', function (event) {
 // Get the current page's filename
 var currentPage = window.location.pathname.split('/').pop();
 
-if (currentPage === 'index.html') {
+if (currentPage === 'about.html') {
+  function setAboutImage(isDarkMode) {
+    if (isDarkMode) {
+      aboutImage.src = 'images/about-night.jpg';
+    } else {
+      aboutImage.src = 'images/about.jpg';
+    }
+  }
+  if (isDarkMode) {
+    setAboutImage(true);
+  } else {
+    setAboutImage(false);
+  }
+
+  function toggleThemeIfIndex () {
+    if (body.classList.contains('light-theme')) {
+      setAboutImage(false);
+    } else {
+      setAboutImage(true);
+    }}
+
+
+  document.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+      toggleThemeIfIndex();
+    }
+  });
+
+  // Toggle the theme and images when the sun or moon is clicked
+  themeImage.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevents the default behavior of the click event
+    toggleThemeIfIndex();
+  });
+}
+
+/*if (currentPage === 'index.html') {
 
 /*   function setSubmitButton(isDarkMode) {
     {
@@ -295,7 +263,7 @@ if (currentPage === 'index.html') {
     }
   } */
 
-  function setInfoButton(isDarkMode) {
+  /* function setInfoButton(isDarkMode) {
     if (isDarkMode) {
       toggleInfoButton.src = 'images/info-night.png';
     } else {
@@ -309,7 +277,7 @@ if (currentPage === 'index.html') {
 /*     setSubmitButton(true);
  */    /* setNewPrompt(true); */
  /*    setPoemOfTheDay(true);
-    setNewPoemButton(true); */
+    setNewPoemButton(true);
     setInfoButton(true);
   } else {
     themeImage.src = 'images/sun.svg';
@@ -317,32 +285,32 @@ if (currentPage === 'index.html') {
 /*     setSubmitButton(false);
  */  /*   setNewPrompt(false);
     setPoemOfTheDay(false);
-    setNewPoemButton(false); */
+    setNewPoemButton(false); 
     setInfoButton(false);
   }
 
   function toggleThemeIfIndex () {
     if (body.classList.contains('light-theme')) {
       /* showRectButton.classList.remove('dark');
-      showRectButton.classList.add('light'); */
+      showRectButton.classList.add('light'); 
       localStorage.setItem('isDarkMode', 'false');
       themeImage.src = 'images/sun.svg';
       themeImage.alt = 'Sun';
       /* setSubmitButton(false);
       setNewPrompt(false);
       setPoemOfTheDay(false);
-      setNewPoemButton(false); */
+      setNewPoemButton(false); 
       setInfoButton(false);
     } else {
       /* showRectButton.classList.remove('light');
-      showRectButton.classList.add('dark'); */
+      showRectButton.classList.add('dark'); 
       localStorage.setItem('isDarkMode', 'true');
       themeImage.src = 'images/moon.svg';
       themeImage.alt = 'Moon';
       /* setSubmitButton(true);
       setNewPrompt(true);
       setPoemOfTheDay(true);
-      setNewPoemButton(true); */
+      setNewPoemButton(true);
       setInfoButton(true);
     }
 
@@ -359,7 +327,7 @@ if (currentPage === 'index.html') {
       resultRectangle.style.display = 'block'; // Show the result rectangle
     } else {
       resultRectangle.style.display = 'none'; // Hide the result rectangle
-    } */
+    } 
     
   }
 
@@ -410,4 +378,4 @@ if (currentPage === 'index.html') {
 /********************** settings.html ****************************/
 /*****************************************************************/
 
-/* toggle theme for settings.html here */ 
+/* toggle theme for settings.html here */

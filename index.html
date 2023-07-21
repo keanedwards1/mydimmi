@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" type="image/x-icon" href="/images/dimmi.png">
+  <link rel="icon" type="image/png" href="/images/dimmi.png">
   <title>Dimmi Handmade</title>
-  <script defer src="js/toggleTheme.js"></script>
-<!--   <script defer src="js/profileDropdown.js"></script>
- -->  <script defer src="js/tooltip.js"></script>
-  <script defer src="js/popup.js"></script>
 </head>
 <body>
 
@@ -21,7 +17,7 @@
       <!-- logo -->
       <div id="title-logo">
         <div id="logo" style="display: inline-block; vertical-align: middle;">
-          <a id="logo-click" href="about.html">
+          <a id="logo-click" href="index.html">
             <img id="logo-img" src="images/dimmi.png" width="60">
           </a>
         </div>
@@ -29,7 +25,7 @@
         <h2 id="title" class="title" style="display: inline-block;
         vertical-align: middle;">
         <span style="cursor: pointer;" onclick="window.location.href=
-        'index.html'">Dimmi Handmade</span>
+        'about.html'">Dimmi Handmade</span>
         </h2>
       </div>
 
@@ -73,6 +69,11 @@
             </div>
           </div>
         </div> -->
+        <a id="infoButton">
+          <img src="images/info.png" alt="info" id="info-image">
+          <span class="tooltip5">cmnd + i</span>
+          <!-- <button id="showRectButton" class="popup-button">info</button> -->
+        </a>
       </div>
     </div>
   </header>
@@ -80,51 +81,58 @@
   <main>
       <div class="grid">
         <a class="grid-item" id="grid1" href="gallery/item1.html">
-            <img src="images/gallery/1.jpeg" alt="Image 1">
+            <img src="images/gallery/1.jpg" alt="Image 1">
             <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid2" href="gallery/item2.html">
-            <img src="images/gallery/2.jpeg" alt="Image 2">
+            <img src="images/gallery/2.jpg" alt="Image 2">
             <div class="item-name">Things & Stuff</div>
         </a>
         <a class="grid-item" id="grid3" href="gallery/item3.html">
-            <img src="images/gallery/3.jpeg" alt="Image 3">
+            <img src="images/gallery/3.jpg" alt="Image 3">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid4" href="gallery/item1.html">
-            <img src="images/gallery/4.jpeg" alt="Image 4">
+        <a class="grid-item" id="grid4" href="gallery/item4.html">
+            <img src="images/gallery/4.jpg" alt="Image 4">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid5" href="gallery/item2.html">
-            <img src="images/gallery/5.jpeg" alt="Image 5">
+        <a class="grid-item" id="grid5" href="gallery/item5.html">
+            <img src="images/gallery/5.jpg" alt="Image 5">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid6" href="gallery/item3.html">
-            <img src="images/gallery/6.jpeg" alt="Image 6">
+        <a class="grid-item" id="grid6" href="gallery/item6.html">
+            <img src="images/gallery/6.jpg" alt="Image 6">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid7" href="gallery/item4.html">
-            <img src="images/gallery/7.jpeg" alt="Image 7">
+        <a class="grid-item" id="grid7" href="gallery/item7.html">
+            <img src="images/gallery/7.jpg" alt="Image 7">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid8" href="gallery/item5.html">
-            <img src="images/gallery/8.jpeg" alt="Image 8">
+        <a class="grid-item" id="grid8" href="gallery/item8.html">
+            <img src="images/gallery/8.jpg" alt="Image 8">
             <div class="item-name">Things & Stuff</div>
         </a>
-        <a class="grid-item" id="grid9" href="gallery/item6.html">
-            <img src="images/gallery/9.jpeg" alt="Image 9">
+        <a class="grid-item" id="grid9" href="gallery/item9.html">
+            <img src="images/gallery/9.jpg" alt="Image 9">
             <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid10" href="gallery/item10.html">
+          <img src="images/gallery/10.jpg" alt="Image 10">
+          <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid11" href="gallery/item11.html">
+          <img src="images/gallery/11.jpg" alt="Image 11">
+          <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid12" href="gallery/item12.html">
+          <img src="images/gallery/12.jpg" alt="Image 12">
+          <div class="item-name">Things & Stuff</div>
         </a>
       </div>
     <!-- for the popup -->
     <div id="bottom-bar">
-      <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+      <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://drawing.garden/">
         <img src="images/live-day.png" alt="live" id="live">
-      </a>
-      <a id="infoButton">
-        <img src="images/info.png" alt="info" id="info-image">
-        <span class="tooltip5">cmnd + i</span>
-        <!-- <button id="showRectButton" class="popup-button">info</button> -->
       </a>
     </div>
 
@@ -148,5 +156,8 @@
       </div>
     </div>
   </main>
+  <script defer src="js/toggleTheme.js"></script>
+  <script defer src="js/tooltip.js"></script>
+  <script defer src="js/popup.js"></script>
 </body>
 </html>
