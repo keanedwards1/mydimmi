@@ -13,40 +13,41 @@ const logoImage = document.getElementById('logo-img');
 const aboutImage = document.getElementById('about-image');
 const bottomBar = document.getElementById('bottom-bar');
 const itemName = document.getElementsByClassName('item-name');
+const topBar = document.getElementById('home');
 
 // Function to set the logo image based on the theme 
 function setLogoImage(isDarkMode) {
   if(isDarkMode) {
-    logoImage.src = 'images/dimmi.png';
+    logoImage.src = '/images/dimmi.png';
   } else {
-    logoImage.src = 'images/dimmi.png';
+    logoImage.src = '/images/dimmi.png';
   }
 }
 
 // Function to set the comp image based on the theme
 function setCompImage(isDarkMode) {
   if (isDarkMode) {
-    fightImage.src = 'images/comp-night.svg';
+    fightImage.src = '/images/comp-night.svg';
   } else {
-    fightImage.src = 'images/comp-day.svg';
+    fightImage.src = '/images/comp-day.svg';
   }
 }
 
 // Function to set the learn image based on the theme
 function setLearnImage(isDarkMode) {
   if (isDarkMode) {
-    learnImage.src = 'images/learn-night.png';
+    learnImage.src = '/images/learn-night.png';
   } else {
-    learnImage.src = 'images/learn-day.png';
+    learnImage.src = '/images/learn-day.png';
   }
 }
 
 // Function to set the live image based on the theme
 function setLiveImage(isDarkMode) {
   if (isDarkMode) {
-    liveImage.src = 'images/live-night.png';
+    liveImage.src = '/images/live-night.png';
   } else {
-    liveImage.src = 'images/live-day.png';
+    liveImage.src = '/images/live-day.png';
   }
 }
 
@@ -54,27 +55,27 @@ function setLiveImage(isDarkMode) {
 // Function to set the upvote image based on the theme
 function setUpvoteImage(isDarkMode) {
   if (isDarkMode) {
-    upvoteImage.src = 'images/contact-night.svg';
+    upvoteImage.src = '/images/contact-night.svg';
   } else {
-    upvoteImage.src = 'images/contact-day.svg';
+    upvoteImage.src = '/images/contact-day.svg';
   }
 }
 
 // Function to set the journal image based on the theme
 function setJournalImage(isDarkMode) {
   if (isDarkMode) {
-    toggleJournal.src = 'images/journal-night.png';
+    toggleJournal.src = '/images/journal-night.png';
   } else {
-    toggleJournal.src = 'images/journal.png';
+    toggleJournal.src = '/images/journal.png';
   }
 }
 
 // Function to set the Info Button style
 function setInfoButton(isDarkMode) {
   if (isDarkMode) {
-    toggleInfoButton.src = 'images/info-night.png';
+    toggleInfoButton.src = '/images/info-night.png';
   } else {
-    toggleInfoButton.src = 'images/info.png';
+    toggleInfoButton.src = '/images/info.png';
   }
 }
 
@@ -84,9 +85,51 @@ function setBottomBarColor(isDarkMode) {
     bottomBar.style.backgroundColor = '#1f2531';
 /*     bottomBar.style.backgroundImage = 'url(images/tangerine.jpeg)'; */
   } else {
-    bottomBar.style.backgroundColor = '#edf1f3';
+    bottomBar.style.backgroundColor = '#d9edf9';
   }
 }
+
+// Function to set the Header Bar Color
+function setTopBarColor(isDarkMode) {
+  if (isDarkMode) {
+    topBar.style.backgroundColor = '#1f2531';
+/*     bottomBar.style.backgroundImage = 'url(images/tangerine.jpeg)'; */
+  } else {
+    topBar.style.backgroundColor = '#d9edf9';
+  }
+}
+
+// Function to set the Gallery Nav Bar Text Color
+
+function setNavBarTextColor(isDarkMode) {
+  const navigationLinks = document.querySelectorAll('.navigation a');
+
+  if (isDarkMode) {
+    navigationLinks.forEach(link => {
+      link.style.color = '#d9d9d9';
+    });
+  } else {
+    navigationLinks.forEach(link => {
+      link.style.color = '#505050';
+    });
+  }
+  const hoverColor = isDarkMode ? 'white' : 'black';
+
+  navigationLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.style.color = hoverColor;
+    });
+
+    link.addEventListener('mouseleave', () => {
+      if (isDarkMode) {
+        link.style.color = '#b3b3b3';
+      } else {
+        link.style.color = '#505050';
+      }
+    });
+  });
+}
+
 
 // Check for user preference in local storage
 const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
@@ -94,7 +137,7 @@ const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
 // Set the initial theme and images based on local storage of user
 if (isDarkMode) {
   body.classList.add('dark-theme');
-  themeImage.src = 'images/moon.svg';
+  themeImage.src = '/images/moon.svg';
   themeImage.alt = 'Moon';
   setCompImage(true);
   setUpvoteImage(true);
@@ -104,6 +147,8 @@ if (isDarkMode) {
   setLogoImage(true);
   setInfoButton(true);
   setBottomBarColor(true);
+  setTopBarColor(true);
+  setNavBarTextColor(true);
 
   for (let i = 0; i < itemName.length; i++) {
     const item = itemName[i];
@@ -117,7 +162,7 @@ if (isDarkMode) {
   }
 } else {
   body.classList.add('light-theme');
-  themeImage.src = 'images/sun.svg';
+  themeImage.src = '/images/sun.svg';
   themeImage.alt = 'toggle to night';
   setCompImage(false);
   setUpvoteImage(false);
@@ -127,6 +172,8 @@ if (isDarkMode) {
   setLogoImage(false);
   setInfoButton(false);
   setBottomBarColor(false);
+  setTopBarColor(false);
+  setNavBarTextColor(false);
 }
 
 function toggleThemeAndImages() {
@@ -134,7 +181,7 @@ function toggleThemeAndImages() {
     body.classList.remove('light-theme');
     body.classList.add('dark-theme');
     localStorage.setItem('isDarkMode', 'true');
-    themeImage.src = 'images/moon.svg';
+    themeImage.src = '/images/moon.svg';
     themeImage.alt = 'Moon';
     setCompImage(true);
     setUpvoteImage(true);
@@ -144,11 +191,13 @@ function toggleThemeAndImages() {
     setLogoImage(true);
     setInfoButton(true);
     setBottomBarColor(true);
+    setTopBarColor(true);
+    setNavBarTextColor(true);
   } else {
     body.classList.remove('dark-theme');
     body.classList.add('light-theme');
     localStorage.setItem('isDarkMode', 'false');
-    themeImage.src = 'images/sun.svg';
+    themeImage.src = '/images/sun.svg';
     themeImage.alt = 'Sun';
     setCompImage(false);
     setUpvoteImage(false);
@@ -158,6 +207,8 @@ function toggleThemeAndImages() {
     setLogoImage(false);
     setInfoButton(false);
     setBottomBarColor(false);
+    setTopBarColor(false);
+    setNavBarTextColor(false);
   }
   // Loop through the titles and change the text color based on the theme
   for (let i = 0; i < itemName.length; i++) {

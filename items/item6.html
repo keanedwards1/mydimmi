@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="icon" type="image/png" href="/images/dimmi.png">
+  <title>Dimmi Handmade</title>
+</head>
+<body>
+
+  <header>
+
+    <!-- home is the div with all the header elements in it (kinda obv) -->
+    <div id="home">
+
+      <!-- logo -->
+      <div id="title-logo">
+        <div id="logo" style="display: inline-block; vertical-align: middle;">
+          <a id="logo-click" href="/index.html">
+            <img id="logo-img" src="/images/dimmi.png" width="60">
+          </a>
+        </div>
+        <!-- home button -->
+        <h2 id="title" class="title" style="display: inline-block;
+        vertical-align: middle;">
+        <span style="cursor: pointer;" onclick="window.location.href=
+        '/about.html'">Dimmi Handmade</span>
+        </h2>
+      </div>
+
+      <!-- page selection -->
+      <div id="menu-bar">
+        <!-- <a id="logo-click" class="menu-bar-buttons" href="settings.html">
+          <img src="images/gear-inverted.png" alt="settings" id="settings">
+          <span class="menu-tooltips" id="settings-tooltip">settings</span>
+        </a> -->
+        <a id="logo-click" class="menu-bar-buttons" href="/about.html">
+          <img src="/images/journal.png" alt="journal" id="journal">
+          <span class="menu-tooltips" id="journal-tooltip">About Dimmi</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="/contact.html">
+          <img src="/images/contact-day.svg" alt="upvote" id="upvote">
+          <span class="menu-tooltips" id="upvote-tooltip">Contact Us</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://www.instagram.com/dimmi_handmade/">
+          <img src="/images/comp-day.svg" alt="comp" id="comp">
+          <span class="menu-tooltips" id="comp-tooltip">Dimmi's Instagram</span>
+        </a>
+        <a id="logo-click" class="menu-bar-buttons" href="/index.html">
+          <img src="/images/learn-day.png" alt="learn" id="learn">
+          <span class="menu-tooltips" id="learn-tooltip">Dimmi's Jewelry & Art</span>
+        </a>
+      </div>
+
+      <!-- profile / toggle theme -->
+      <div id="pref">
+        <div id="theme-toggle-div">
+          <img id="theme-image" src="/images/sun.svg" alt="sun">
+        </div>
+        <!-- <div id="profile-div">
+          <div id="dropdown" class="dropdown-content">
+            <img src="images/profile-day.png" alt="profile photo" id="profile-photo">
+            <div id="dropdown-items">
+              <a href="profile.html" class="dropdown-item">Profile</a>
+              <a href="rank.html" class="dropdown-item">Rank</a>
+                <a href="settings.html" class="dropdown-item">Settings</a>  might put this here,
+              didn't want to remove it from the header for now 
+            </div>
+          </div>
+        </div> -->
+        <a id="infoButton">
+          <img src="/images/info.png" alt="info" id="info-image">
+          <span class="tooltip5">cmnd + i</span>
+          <!-- <button id="showRectButton" class="popup-button">info</button> -->
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="navigation">
+        <a href="/index.html" class="back-to-work">back to all works</a>
+        <div id="combo">
+            <a href="item5.html" class="prev">prev</a>
+            <a id="backslash">/</a>
+            <a href="item7.html" class="next">next</a>
+        </div>
+    </div>
+
+    <div class="grid-item-page">
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="item6-images/6.jpg" alt="Image 1">
+            </div>
+            <!-- Add more photo items as needed -->
+        </div>
+
+        <div class="description">
+            title <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit consequat risus, ac fringilla
+            magna condimentum vitae. Sed facilisis felis eu velit viverra, nec rutrum urna placerat. Morbi tempor nulla
+            id faucibus tristique. Pellentesque viverra vehicula nibh, vitae pulvinar risus tempor nec. 
+        </div>
+
+        <div class="description">
+            title <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit consequat risus, ac fringilla
+            magna condimentum vitae. Sed facilisis felis eu velit viverra, nec rutrum urna placerat. Morbi tempor nulla
+            id faucibus tristique. Pellentesque viverra vehicula nibh, vitae pulvinar risus tempor nec. 
+        </div> 
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="item6-images/6.1.jpg" alt="Image 2">
+            </div>
+            <!-- Add more photo items as needed -->
+        </div>
+
+    </div>
+
+    <div class="navigation" id="navigation2">
+        <a href="/website2/index.html" class="back-to-work">back to all works</a>
+        <div id="combo">
+            <a href="item5.html" class="prev">prev</a>
+            <a id="backslash">/</a>
+            <a href="item7.html" class="next">next</a>
+        </div>
+    </div>
+    <div class="grid">
+        <a class="grid-item" id="grid1" href="/items/item1.html">
+            <img src="/images/gallery/1.jpg" alt="Image 1">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid2" href="/items/item2.html">
+            <img src="/images/gallery/2.jpg" alt="Image 2">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid3" href="/items/item3.html">
+            <img src="/images/gallery/3.jpg" alt="Image 3">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid4" href="/items/item4.html">
+            <img src="/images/gallery/4.jpg" alt="Image 4">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid5" href="/items/item5.html">
+            <img src="/images/gallery/5.jpg" alt="Image 5">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid6" href="/items/item6.html">
+            <img src="/images/gallery/6.jpg" alt="Image 6">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid7" href="/items/item7.html">
+            <img src="/images/gallery/7.jpg" alt="Image 7">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid8" href="/items/item8.html">
+            <img src="/images/gallery/8.jpg" alt="Image 8">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid9" href="/items/item9.html">
+            <img src="/images/gallery/9.jpg" alt="Image 9">
+            <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid10" href="/items/item10.html">
+          <img src="/images/gallery/10.jpg" alt="Image 10">
+          <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid11" href="/items/item11.html">
+          <img src="/images/gallery/11.jpg" alt="Image 11">
+          <div class="item-name">Things & Stuff</div>
+        </a>
+        <a class="grid-item" id="grid12" href="/items/item12.html">
+          <img src="/images/gallery/12.jpg" alt="Image 12">
+          <div class="item-name">Things & Stuff</div>
+        </a>
+      </div>
+    <!-- for the popup -->
+    <div id="bottom-bar">
+      <a id="logo-click" class="menu-bar-buttons" target="_blank" href="https://drawing.garden/">
+        <img src="/images/live-day.png" alt="live" id="live">
+      </a>
+    </div>
+
+    <!-- this is the popup that pops up when the user presses cmd + i -->
+    <div id="rectangleContainer">
+      <div id="rectangle">
+        <button id="closeButton">x</button>
+        <div id="popup-writing">
+          <h3>
+            <div class="vector-art">cmd + i toggles the info page</div>
+          </h3>
+          <h3>
+            <div class="vector-art">cmd + k toggles light/dark theme</div>
+          </h3>
+        </div>
+
+            <!-- TODO: add this -->
+
+
+        <button class="custom-button" onclick="window.open('https://us9.list-manage.com/contact-form?u=9598889f9a43720b03b41b830&form_id=382b332dedbb6cc324e526c41542cb5b', '_blank')">Contact Us</button>
+      </div>
+    </div>
+  </main>
+  <script defer src="/js/toggleTheme.js"></script>
+  <script defer src="/js/tooltip.js"></script>
+  <script defer src="/js/popup.js"></script>
+</body>
+</html>
